@@ -85,16 +85,16 @@ function Home() {
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0 opacity-[88%]">
           <ul>
             <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#29A74F] px-4">
-              <a className="flex justify-between items-center w-full text-gray-300" href='/'>Spotify <FaSpotify size={30} /></a>
+              <a className="flex justify-between items-center w-full text-gray-300" href='https://www.spotify.com/us/'>Spotify <FaSpotify size={30} /></a>
             </li>
             <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600 px-4">
-              <a className="flex justify-between items-center w-full text-gray-300" href='/'>Linkedin <FaLinkedin size={30} /></a>
+              <a className="flex justify-between items-center w-full text-gray-300" href='https://www.linkedin.com/'>Linkedin <FaLinkedin size={30} /></a>
             </li>
             <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333] px-4">
-              <a className="flex justify-between items-center w-full text-gray-300" href='/'>FaceBook <FaFacebookSquare size={30} /></a>
+              <a className="flex justify-between items-center w-full text-gray-300" href='https://www.facebook.com/'>FaceBook <FaFacebookSquare size={30} /></a>
             </li>
             <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#33A2B7] px-4">
-              <a className="flex justify-between items-center w-full text-gray-300" href='/'>Twitter <FaTwitterSquare size={30} /></a>
+              <a className="flex justify-between items-center w-full text-gray-300" href='https://twitter.com/i/flow/login'>Twitter <FaTwitterSquare size={30} /></a>
             </li>
             <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#9050E5] px-4">
               <a className="flex justify-between items-center w-full text-gray-300" href='/'>Donate <FaDonate size={30} /></a>
