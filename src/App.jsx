@@ -9,17 +9,13 @@ import Studio from './pages/Studio';
 function App() {
   return (
     <Router>
-
-      <Home />
-
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/studio" element={<Studio/>} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/contact" element={<Contact/>} />
-        
       </Routes>
-
     </Router>
   );
 }
