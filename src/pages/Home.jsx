@@ -18,14 +18,15 @@ function Home() {
 
       <nav className="fixed w-full h-[80px] flex justify-between items-center px-4">
         <div>
-          <img src={Logo} alt="Logo Image" style={{ width: "150px" }} />
+          <img src={Logo} alt="Logo Image" style={{ width: "170px" }} />
         </div>
 
-        <div className=" gap-5 hidden md:flex bg-black opacity-[80%]">
+        <div className=" gap-5 hidden md:flex">
           <NavItem to="/studio">Studio</NavItem>
           <NavItem to="/profile">Profile</NavItem>
           <NavItem to="/contact">Contact</NavItem>
-          <LogOut type="submit">Log Out</LogOut>
+          {/* connect to logout screen */}
+          <LogOut  type="submit"><a href='/login'>Log Out</a></LogOut>
         </div>
 
         {/* hamburger */}
@@ -37,7 +38,7 @@ function Home() {
           className={
             !nav
               ? "hidden"
-              : "absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center opacity-[85%] "
+              : "absolute top-0 left-0 w-full h-screen  bg-black flex flex-col justify-center items-center opacity-[85%]"
           }
         >
           <Li className="mb-16 text-4xl">
@@ -84,19 +85,19 @@ function Home() {
       {/* social icons */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0 opacity-[88%]">
           <ul>
-            <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#29A74F] px-4">
+            <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#29A74F] px-4 rounded-tr-[10px] rounded-br-[10px]">
               <a className="flex justify-between items-center w-full text-gray-300" href='https://www.spotify.com/us/'>Spotify <FaSpotify size={30} /></a>
             </li>
-            <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600 px-4">
+            <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600 px-4 rounded-tr-[10px] rounded-br-[10px]">
               <a className="flex justify-between items-center w-full text-gray-300" href='https://www.linkedin.com/'>Linkedin <FaLinkedin size={30} /></a>
             </li>
-            <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333] px-4">
+            <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333] px-4 rounded-tr-[10px] rounded-br-[10px]">
               <a className="flex justify-between items-center w-full text-gray-300" href='https://www.facebook.com/'>FaceBook <FaFacebookSquare size={30} /></a>
             </li>
-            <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#33A2B7] px-4">
+            <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#33A2B7] px-4 rounded-tr-[10px] rounded-br-[10px]">
               <a className="flex justify-between items-center w-full text-gray-300" href='https://twitter.com/i/flow/login'>Twitter <FaTwitterSquare size={30} /></a>
             </li>
-            <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#9050E5] px-4">
+            <li className="w-[160px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#9050E5] px-4 rounded-tr-[10px] rounded-br-[10px]">
               <a className="flex justify-between items-center w-full text-gray-300" href='/'>Donate <FaDonate size={30} /></a>
             </li>
           </ul>
