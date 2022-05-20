@@ -54,7 +54,7 @@ function Login() {
             </div>
 
             {/* sign up */}
-            <div className="w-2/5 bg-[#EF258A] text-white rounded-tr-2xl rounded-br-2xl py-36 px12">
+            <div className="w-2/5 bg-[#EF258A] text-white rounded-tr-xl rounded-br-xl py-36 px12">
               <h2 className="text-3xl font-bold mb-2">Welcome to Forged Ensemble!</h2>
               <div className='border-2 w-20 border-white inline-block mb-2'></div>
               <p className="p-10 text-xl font-bold mb-5">Sign up and get started on your musical journey with us.</p>

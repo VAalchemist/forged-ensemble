@@ -56,7 +56,7 @@ function Signup() {
             </div>
 
             {/* sign up */}
-            <div className="w-2/5 bg-[#00b8ff] text-white rounded-tr-2xl rounded-br-2xl py-36 px12">
+            <div className="w-2/5 bg-[#00b8ff] text-white rounded-tr-xl rounded-br-xl py-36 px12">
               <h2 className="text-3xl font-bold mb-2 ml-[4px] mr-[4px]">Welcome Back to Forged Ensemble!</h2>
               <div className='border-2 w-20 border-white inline-block mb-2'></div>
               <p className="p-10 text-xl font-bold mb-5">Sign-In and continue your musical journey.</p>
