@@ -10,7 +10,6 @@ import background from './/images/electric.jpg';
 function App() {
   return (
     <>
-  
     <Router>
 
       <Routes>
