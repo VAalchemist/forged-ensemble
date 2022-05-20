@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 function Studio() {
   return (
-    <div>
-      <h1>Studio</h1>
-    </div>
-  )
+    <>
+  studio
+ </>
+)
 }
 
 export default Studio

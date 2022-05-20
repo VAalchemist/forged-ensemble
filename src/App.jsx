@@ -5,10 +5,12 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import Studio from './pages/Studio';
+import background from './/images/electric.jpg';
 
 
 function App() {
   return (
+    <>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,6 +21,10 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
       </Routes>
     </Router>
+    <div className='min-h-screen bg-cover bg-center sm:bg-center md:bg-center' style={{ backgroundImage: `url(${background})` }}>
+
+</div>
+    </>
   );
 }
 
