@@ -56,7 +56,7 @@ function Login() {
           <h2 className="text-3xl font-bold mb-2">Welcome to Forged Ensemble!</h2>
           <div className='border-2 w-20 border-white inline-block mb-2'></div>
           <p className="p-10 text-xl font-bold mb-5">Sign up and get started on your musical journey with us.</p>
-          <div to='/signup' className='border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-gray-500'>Sign Up</div>
+          <Link to='/signup' className='border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-gray-500'>Sign Up</Link>
         </div>
       </div>
 
