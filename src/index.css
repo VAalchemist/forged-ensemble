@@ -2,10 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-@layer base {
-    body, html {
-    @apply h-full;
-    @apply m-0;
-}
-} */
+

@@ -21,9 +21,9 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
       </Routes>
     </Router>
-    <div className='min-h-screen bg-cover bg-center sm:bg-center md:bg-center' style={{ backgroundImage: `url(${background})` }}>
+    {/* <div className='min-h-screen bg-cover bg-center sm:bg-center md:bg-center' style={{ backgroundImage: `url(${background})` }}>
 
-</div>
+</div> */}
     </>
   );
 }
