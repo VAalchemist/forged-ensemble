@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const NavItem = styled(Link)`
 margin: 0 auto;
     object-fit: fill;
-    border-radius: 9%;
+    border-radius: 10px;
     padding: 0.3rem 1rem;
     border: 3px solid #00bdff;
     transition: all 0.3s ease;
@@ -25,7 +25,7 @@ margin: 0 auto;
 export const LogOut = styled.button`
 margin: 0 auto;
     object-fit: fill;
-    border-radius: 9%;
+    border-radius: 10px;
     padding: 0.3rem 1rem;
     border: 3px solid #00bdff;
     transition: all 0.3s ease;
@@ -44,7 +44,7 @@ margin: 0 auto;
 export const Li = styled.li`
 /* margin: 0 auto; */
     object-fit: fill;
-    border-radius: 5%;
+    border-radius: 10px;
     padding: 0.3rem 1rem;
     border: 3px solid #00bdff;
     transition: all 0.3s ease;
@@ -63,7 +63,7 @@ export const Li = styled.li`
 
 export const Ham = styled.div`
 object-fit: fill;
-    border-radius: 9%;
+    border-radius: 10px;
     padding: 0.3rem .7rem;
     border: 3px solid #00bdff;
     transition: all 0.3s ease;
