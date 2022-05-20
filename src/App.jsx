@@ -4,16 +4,17 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Studio from './pages/Studio';
+import background from './/images/electric.jpg';
 
 
 function App() {
   return (
+    <>
+  
     <Router>
 
-      <Home />
-
       <Routes>
-        <Route path="/login" element={<Login/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="/studio" element={<Studio/>} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/contact" element={<Contact/>} />
@@ -21,6 +22,10 @@ function App() {
       </Routes>
 
     </Router>
+    <div className='min-h-screen bg-cover bg-center sm:bg-center md:bg-center' style={{ backgroundImage: `url(${background})` }}>
+
+</div>
+    </>
   );
 }
 
