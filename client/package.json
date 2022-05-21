@@ -2,6 +2,7 @@
   "name": "forged-ensemble",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

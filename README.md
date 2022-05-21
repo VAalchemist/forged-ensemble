@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Forged Ensemble
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://img.shields.io/badge/Javascript-yellow.svg)
+![](https://img.shields.io/badge/Express.js-red.svg)
+![](https://img.shields.io/badge/Node.js-green.svg)
+![](https://img.shields.io/badge/Mongoose-orange.svg)
+![](https://img.shields.io/badge/MongoDB-blue.svg)
+![](https://img.shields.io/badge/React-pink.svg)
+![](https://img.shields.io/badge/Tailwind-purple.svg)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+# Table of Contents
+* [Description](#description)
+* [Deployed Page](#deployed-page)
+* [Photos](#photos)
+* [Installation](#installation)
+* [Contact](#contact)
+* [Packages Used](#packages-used)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Description
+```
+ 🎼 🎹 Progressive web application for musicians and non-musicians alike to share music and conversation!
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Packages Used
+  * Express
+  * Node
+  * React
+  * MongoDB
+  * Mongoose
+  * Tailwind
 
-### `npm test`
+# Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> detailed explanation for 
+>> launchingg app and stuff here
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Photos
+![]()
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![]()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Deployed Page
+<a href="https://vaalchemist.github.io/JACK-ensemble/">Github pages for application</a> 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<a href="">Heroku link for application</a> 
+ 
+# Contact
+<a href="">LinkedIn: Justyn Subrai </a><br>
+<a href="https://github.com/JustynSubrai">Github: JustynSubrai</a><br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<a href="">LinkedIn: Kevin Castillo </a><br>
+<a href="https://github.com/kcastil7">Github: kcastil7</a><br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<a href="">LinkedIn: Arlo Garcia </a><br>
+<a href="https://github.com/Eddielo26">Github: Eddielo26</a><br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<a href="">LinkedIn: Charlene Kim </a><br>
+<a href="https://github.com/VAalchemist">Github: VAalchemist</a><br>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Return to top](#forged-ensemble)
