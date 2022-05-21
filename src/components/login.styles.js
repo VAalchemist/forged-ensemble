@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
 
 export const Background = styled.video`
   position: absolute;
@@ -24,4 +25,17 @@ export const LoginImg = styled.img`
   z-index: -2;
   display: block;
   margin: 0 auto;
+`;
+
+export const Zoomanimation = keyframes`
+  0% {
+  transform: scale(.1, .1);
+  }
+  100% {
+  transform: scale(1, 1);
+  }
+`;
+
+export const Zoom = styled.div`
+  animation: ${Zoomanimation} 5.7s ease
 `;

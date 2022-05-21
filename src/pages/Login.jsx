@@ -1,6 +1,6 @@
 import React from 'react'
 import Tunnel from '../images/login.mp4'
-import { Background, LoginImg } from '../components/login.styles'
+import { Background, LoginImg, Zoom, Zoomanimation } from '../components/login.styles'
 import loginimg from '../images/loginImg.png'
 import { FaFacebookF, FaGoogle, FaTwitter, FaRegEnvelope } from 'react-icons/fa'
 import { MdLockOutline } from 'react-icons/md'
@@ -17,7 +17,7 @@ function Login() {
 
       <main className='flex flex-col items-center justify-center min-h-screen py-2'>
         <div className='flex flex-col items-center w-full px-20 text-center'>
-          <div className='border-3 border border-[#EF258A] bg-black bg-opacity-[87%] rounded-2xl shadow-2xl flex w-2/3 max-w-4xl'>
+          <Zoom className='border-3 border border-[#EF258A] bg-black bg-opacity-[87%] rounded-2xl shadow-2xl flex w-2/3 max-w-4xl' >
             {/* login */}
             <div className="w-3/5 p-5 text-white rounded-tl-2xl rounded-bl-2xl">
               <div className='text-left font-bold'><span className='text-[#ff006e]'>Forged</span> Ensemble</div>
@@ -60,7 +60,8 @@ function Login() {
               <p className="p-10 text-xl font-bold mb-5">Sign up and get started on your musical journey with us.</p>
               <Link to='/signup' className='border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-gray-500'>Sign Up</Link>
             </div>
-          </div>
+          </Zoom>
+
 
         </div>
       </main>
