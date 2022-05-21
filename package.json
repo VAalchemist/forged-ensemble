@@ -1,0 +1,20 @@
+{
+  "name": "forged-ensemble",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/Javascript-yellow.svg)\r ![](https://img.shields.io/badge/Express.js-red.svg)\r ![](https://img.shields.io/badge/Node.js-green.svg)\r ![](https://img.shields.io/badge/Mongoose-orange.svg)\r ![](https://img.shields.io/badge/MongoDB-blue.svg)\r ![](https://img.shields.io/badge/React-pink.svg)\r ![](https://img.shields.io/badge/Tailwind-purple.svg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VAalchemist/forged-ensemble.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VAalchemist/forged-ensemble/issues"
+  },
+  "homepage": "https://github.com/VAalchemist/forged-ensemble#readme"
+}
