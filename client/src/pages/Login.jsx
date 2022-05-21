@@ -1,18 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
+import { useMutation } from '@apollo/client';
+import { LOGIN } from '../utils/mutations';
+import Auth from '../utils/auth';
 import Tunnel from '../images/login.mp4'
-import { Background, LoginImg, Zoom, Zoomanimation } from '../components/login.styles'
+import { Background, LoginImg, Zoom } from '../components/login.styles'
 import loginimg from '../images/loginImg.png'
 import { FaFacebookF, FaGoogle, FaTwitter, FaRegEnvelope } from 'react-icons/fa'
 import { MdLockOutline } from 'react-icons/md'
-import { Link } from 'react-router-dom'
 
-function Login() {
+
+function Login(props) {
+
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }, data] = useMutation(LOGIN, { errorPolicy: 'all' });
+
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState.email)
+    console.log(formState.password)
+    try {
+      const mutationResponse = await login({
+        variables: { email: formState.email, password: formState.password },
+
+      });
+
+
+      const token = mutationResponse.data.login.token;
+      Auth.login(token);
+    } catch (e) {
+
+      console.log("there is an error " + e);
+    }
+
+    console.log("form submitted");
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
   return (
     <div>
       <Background autoPlay loop muted>
         <source src={Tunnel} type="video/mp4" />
       </Background>
-      <LoginImg src={loginimg}/>
+      <LoginImg src={loginimg} />
 
 
       <main className='flex flex-col items-center justify-center min-h-screen py-2'>
@@ -32,23 +70,32 @@ function Login() {
                 </div>
 
                 <p className='text-white my-3'>or login with email</p>
-                <div className='flex flex-col items-center'>
-                  <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
-                    <FaRegEnvelope className='text-gray-500 m-2' />
-                    <input type='email' name='email' placeholder='Email' className='bg-gray-300 outline-none text-sm flex-1'></input>
-                  </div>
-                  <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
-                    <MdLockOutline className='text-gray-500 m-2' />
-                    <input type='password' name='password' placeholder='Password' className='bg-gray-300 outline-none text-sm flex-1'></input>
-                  </div>
-                  <div className='flex justify-between w-64 mb-5'>
-                    <label className='flex items-center text-xs'><input type='checkbox' name='remember' className='mr-2'></input>Remember Me</label>
+                <form onSubmit={handleFormSubmit}>
+                  <div className='flex flex-col items-center'>
 
-                    <a href='#' className='text-xs'>Forgot Password?</a>
+                    <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
+
+                      <FaRegEnvelope className='text-gray-500 m-2' />
+                      <input type='email' name='email' placeholder='Email' className='bg-gray-300 outline-none text-sm flex-1' onChange={handleChange}></input>
+                    </div>
+                    <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
+                      <MdLockOutline className='text-gray-500 m-2' />
+                      <input type='password' name='password' placeholder='Password' className='bg-gray-300 outline-none text-sm flex-1' onChange={handleChange}></input>
+                    </div>
+                    <div className='flex justify-between w-64 mb-5'>
+                      <label className='flex items-center text-xs'><input type='checkbox' name='remember' className='mr-2' ></input>Remember Me</label>
+
+                      <a href='#' className='text-xs'>Forgot Password?</a>
+                    </div>
                   </div>
-                </div>
-                {/* Sign-In */}
-                <a href='/' className='border-2 border-[#ff006e] text-[#ff006e] rounded-full px-12 py-2 inline-block font-semibold hover:bg-[#ff006e] hover:text-white'>Sign In</a>
+                  {/* Sign-In */}
+                  {error ? (
+                    <div>
+                      <p className="error-text">The provided credentials are incorrect</p>
+                    </div>
+                  ) : null}
+                  <button type='submit' className='border-2 border-[#ff006e] text-[#ff006e] rounded-full px-12 py-2 inline-block font-semibold hover:bg-[#ff006e] hover:text-white'>Sign In</button>
+                </form>
               </div>
 
             </div>
@@ -64,11 +111,11 @@ function Login() {
 
 
         </div>
-      </main>
+      </main >
 
 
 
-    </div>
+    </div >
   )
 }
 
