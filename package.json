@@ -1,19 +1,16 @@
 {
   "name": "forged-ensemble",
   "version": "0.1.0",
-<<<<<<< HEAD
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
-<<<<<<< HEAD
-    "@apollo/client": "^3.3.16",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.2.0",
-    "@testing-library/user-event": "^13.5.0",
-    "graphql": "^15.5.0",
-    "jwt-decode": "^3.1.2",
-=======
->>>>>>> 2fe0f0ce878b57a1e779ad36929f65f2a125a3e2
+    "@apollo/client": "^3.3.7",
+    "@stripe/stripe-js": "^1.3.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "graphql": "^14.6.0",
+    "jwt-decode": "^2.2.0",   
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
@@ -21,31 +18,25 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5"
   },
-=======
-  "description": "",
-  "main": "server/server.js",
->>>>>>> 0f6588d2de61c8c8654a39e6d470a03ecbc64d09
   "scripts": {
-    "start": "node server/server.js",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-<<<<<<< HEAD
-    "autoprefixer": "^10.4.7",
-<<<<<<< HEAD
-    "postcss": "^8.4.13",
-=======
-    "postcss": "^8.4.14",
->>>>>>> 2fe0f0ce878b57a1e779ad36929f65f2a125a3e2
-    "tailwindcss": "^3.0.24"
-=======
-    "concurrently": "^5.1.0"
->>>>>>> 0f6588d2de61c8c8654a39e6d470a03ecbc64d09
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
