@@ -15,7 +15,7 @@ function Login() {
       <LoginImg src={loginimg}/>
 
 
-      <main className='flex flex-col items-center justify-center min-h-screen py-2'>
+      <main className='md:flex hidden flex-col items-center justify-center min-h-screen py-2'>
         <div className='flex flex-col items-center w-full px-20 text-center'>
           <Zoom className='border-3 border border-[#EF258A] bg-black bg-opacity-[87%] rounded-2xl shadow-2xl flex w-2/3 max-w-4xl' >
             {/* login */}
@@ -61,12 +61,48 @@ function Login() {
               <Link to='/signup' className='border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-gray-500'>Sign Up</Link>
             </div>
           </Zoom>
-
-
         </div>
       </main>
+      {/* mobile view */}
+      <main className='flex flex-col items-center justify-center min-h-screen py-2'>
+        <Zoom className='border-2 border-[#ff006e] rounded-xl flex flex-col items-center w-full px-24 m-5 text-center'>
+            {/* login */}
+            <div className="w-5/5 p-5 text-white rounded-tl-2xl rounded-bl-2xl">
+              <div className='font-bold'><span className='text-[#ff006e]'>Forged</span> Ensemble</div>
+              <div className='py-10'>
+                <h2 className='text-3xl font-bold mb-2'>Sign into your Account</h2>
+                <div className='border-2 w-20 border-[#ff006e] inline-block mb-2'></div>
+                {/* Social Login */}
+                <div className='flex justify-center my-2'>
+                  <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaFacebookF className='text-sm' /></a>
+                  <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaTwitter className='text-sm' /></a>
+                  <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaGoogle className='text-sm' /></a>
+              </div>
 
+                <p className='text-white my-3'>or login with email</p> 
+                <div className='flex flex-col items-center'>
+                  <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
+                    <FaRegEnvelope className='text-gray-500 m-2' />
+                    <input type='email' name='email' placeholder='Email' className='bg-gray-300 outline-none text-sm flex-1'></input>
+                  </div>
+                  <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
+                    <MdLockOutline className='text-gray-500 m-2' />
+                    <input type='password' name='password' placeholder='Password' className='bg-gray-300 outline-none text-sm flex-1'></input>
+                    </div>
+                  <div className='flex justify-between w-64 mb-5'>
+                    <label className='flex items-center text-xs'><input type='checkbox' name='remember' className='mr-2'></input>Remember Me</label>
 
+                    <a href='#' className='text-xs'>Forgot Password?</a>
+                  </div>
+                  <div className='flex p-5'>
+                  <Link to='/' className='border-2 border-[#ff006e] rounded-full px-12 py-2 mr-8 inline-block font-semibold text-[#ff006e] hover:bg-[#ff006e] hover:text-white'>Sign in</Link>
+                  <Link to='/signup' className='border-2 border-[#ff006e] text-[#ff006e] rounded-full px-12 py-2 inline-block  font-semibold hover:bg-[#ff006e] hover:text-white'>Sign Up</Link>   
+                  </div>
+                </div>
+            </div>
+        </div>
+      </Zoom>
+      </main>
 
     </div>
   )
