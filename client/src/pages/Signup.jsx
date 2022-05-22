@@ -1,18 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Tunnel from '../images/login.mp4'
 import { Background, LoginImg, Zoom } from '../components/login.styles'
 import loginimg from '../images/loginImg.png'
 import { FaFacebookF, FaGoogle, FaTwitter, FaRegEnvelope, FaUserAstronaut } from 'react-icons/fa'
 import { MdLockOutline } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import { useMutation } from '@apollo/client';
+import Auth from '../utils/auth';
+import { ADD_USER } from '../utils/mutations';
 
 function Signup() {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [addUser, { error }, data] = useMutation(ADD_USER,{ errorPolicy: 'all' });
+
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const mutationResponse = await addUser({
+        variables: {
+          email: formState.email,
+          password: formState.password,
+          firstName: formState.firstName,
+          lastName: formState.lastName,
+        },
+      });
+      console.log(error);
+      const token = mutationResponse.data.addUser.token;
+      Auth.login(token);
+
+
+    }
+    catch (e) {
+
+      console.log("there is an error " + e);
+  }
+
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+
+
+
   return (
     <div>
       <Background autoPlay loop muted>
         <source src={Tunnel} type="video/mp4" />
       </Background>
-      <LoginImg src={loginimg}/>
+      <LoginImg src={loginimg} />
 
 
       <main className='flex flex-col items-center justify-center min-h-screen py-2'>
@@ -32,25 +74,36 @@ function Signup() {
                 </div>
 
                 <p className='text-white my-3'>or sign up with email</p>
-                <div className='flex flex-col items-center'>
-                  <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
-                    <FaRegEnvelope className='text-gray-500 m-2' />
-                    <input type='email' name='email' placeholder='Email' className='bg-gray-300 outline-none text-sm flex-1'></input>
+                <form onSubmit={handleFormSubmit}>
+                  <div className='flex flex-col items-center'>
+                    <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
+                      <FaRegEnvelope className='text-gray-500 m-2' />
+                      <input type='email' name='email' placeholder='Email' className='bg-gray-300 outline-none text-sm flex-1' onChange={handleChange}></input>
+                    </div>
+                    <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
+                      <FaUserAstronaut className='text-gray-500 m-2' />
+                      <input type='firstname' name='firstName' placeholder='First Name' className='bg-gray-300 outline-none text-sm flex-1' onChange={handleChange}></input>
+                    </div>
+                    <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
+                      <FaUserAstronaut className='text-gray-500 m-2' />
+                      <input type='lastname' name='lastName' placeholder='Last Name' className='bg-gray-300 outline-none text-sm flex-1' onChange={handleChange}></input>
+                    </div>
+                    <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
+                      <MdLockOutline className='text-gray-500 m-2' />
+                      <input type='password' name='password' placeholder='Password' className='bg-gray-300 outline-none text-sm flex-1' onChange={handleChange}></input>
+                    </div>
+                    <div className='flex justify-center w-64 mb-5'>
+                      <p className='flex text-xs'>Click below to start your Journey</p>
+                    </div>
                   </div>
-                  <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
-                    <FaUserAstronaut className='text-gray-500 m-2' />
-                    <input type='username' name='username' placeholder='Username' className='bg-gray-300 outline-none text-sm flex-1'></input>
-                  </div>
-                  <div className='bg-gray-300 w-64 p-2 flex items-center mb-3'>
-                    <MdLockOutline className='text-gray-500 m-2' />
-                    <input type='password' name='password' placeholder='Password' className='bg-gray-300 outline-none text-sm flex-1'></input>
-                  </div>
-                  <div className='flex justify-center w-64 mb-5'>
-                    <p className='flex text-xs'>Click below to start your Journey</p>
-                  </div>
-                </div>
-                {/* Sign-In */}
-                <a href='/' className='border-2 border-[#00b8ff] text-[#00b8ff] rounded-full px-12 py-2 inline-block font-semibold hover:bg-[#00b8ff] hover:text-white'>Sign Up</a>
+                  {/* Sign-In */}
+                  {error ? (
+                    <div>
+                      <p className="error-text">Please enter valid data</p>
+                    </div>
+                  ) : null}
+                  <button type="submit" className='border-2 border-[#00b8ff] text-[#00b8ff] rounded-full px-12 py-2 inline-block font-semibold hover:bg-[#00b8ff] hover:text-white'>Sign Up</button>
+                </form>
               </div>
 
             </div>
