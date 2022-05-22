@@ -16,6 +16,9 @@ db.once('open', async () => {
     {
       firstName: 'You'
     },
+    {
+      firstName: 'I'
+    },
 
   ]);
 
