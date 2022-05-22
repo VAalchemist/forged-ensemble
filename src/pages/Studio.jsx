@@ -14,7 +14,7 @@ function Studio() {
         <div className='grid grid-cols-4 md:grid-cols-3 gap-4 mt-28'>
           
 
-        <div data-note='C' class=" w-28 md:w-full h-auto shadow-2xl shadow-orange-100 pb-full rounded-xl bg-[#00dfff]">C</div>
+        <div data-note='C' class="w-28 sm:w-40 md:w-full h-auto shadow-2xl shadow-orange-100 pb-full rounded-xl bg-[#00dfff]">C</div>
     <div data-note='Db' class="w-full h-28 md:h-64 shadow-2xl shadow-orange-100 pb-full rounded-xl bg-[#ff8f00]">Db</div>
     <div data-note='D' class="w-full lg:h-72 shadow-2xl shadow-orange-100 pb-full rounded-xl bg-[#FC77EB]">D</div>
     <div data-note='E' class="w-full sm:h-36 shadow-2xl shadow-orange-100 pb-full rounded-xl bg-[#36EB42]">E</div>
