@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
 import Logo from "../images/board.png";
-import { NavItem, LogOut, Ham, Li } from "../components/nav.stlyes";
+import { NavItem, LogOut, Ham, Li } from "../components/nav.styles";
 
 function Home() {
   const [nav, setNav] = useState(false);
