@@ -12,6 +12,7 @@ function Home() {
 
   return (
     <>
+
       <Background autoPlay loop muted>
         <source src={music} type="video/mp4" />
       </Background>
