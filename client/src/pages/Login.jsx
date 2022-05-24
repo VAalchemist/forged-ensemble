@@ -109,7 +109,6 @@ function Login(props) {
             </div>
           </Zoom>
         </div>
-<<<<<<< HEAD
       </main>
       {/* mobile view */}
       <main className='flex flex-col items-center justify-center min-h-screen py-2'>
@@ -126,9 +125,6 @@ function Login(props) {
                   <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaTwitter className='text-sm' /></a>
                   <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaGoogle className='text-sm' /></a>
               </div>
-=======
-      </main >
->>>>>>> 20b6a437e824c1157e1babacfa54861aa0a97975
 
                 <p className='text-white my-3'>or login with email</p> 
                 <div className='flex flex-col items-center'>
