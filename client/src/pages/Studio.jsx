@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Nav from '../pages/Nav';
 
 function Studio() {
   return (
     <header>
+    <Nav />
 
       <div>
         <div data-note='C' className='bg-[#00dfff]'></div>

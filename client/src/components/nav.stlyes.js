@@ -7,7 +7,7 @@ margin: 0 auto;
     border-radius: 10px;
     padding: 0.3rem 1rem;
     border: 3px solid #00bdff;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     /* background: black; */
     color: #fcacf2;
     font-weight: bold;
@@ -28,9 +28,10 @@ margin: 0 auto;
     border-radius: 10px;
     padding: 0.3rem 1rem;
     border: 3px solid #00bdff;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     color: #fcacf2;
     font-weight: bolder;
+    margin-bottom: 5px;
     &:hover {
         transform: scale(1.1);
         box-shadow: 0 0 1px #ff006e,
@@ -47,7 +48,7 @@ export const Li = styled.li`
     border-radius: 10px;
     padding: 0.3rem 1rem;
     border: 3px solid #00bdff;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     color: #fcacf2;
     font-weight: bolder;
     &:hover {
@@ -66,7 +67,7 @@ object-fit: fill;
     border-radius: 10px;
     padding: 0.3rem .7rem;
     border: 3px solid #00bdff;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
  color: #fcacf2;
  :hover {
         transform: scale(1.1);

@@ -14,7 +14,7 @@ export const Background = styled.video`
   margin: 0 auto;
 `;
 
-export const LoginImg = styled.img`
+export const BgImg = styled.img`
   position: absolute;
   width: 100%;
   height: 100%;

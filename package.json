@@ -19,6 +19,7 @@
     "dependencies": {
         "@apollo/client": "^3.6.4",
         "bcrypt": "^5.0.1",
+        "emailjs-com": "^3.2.0",
         "graphql": "^16.5.0",
         "jsonwebtoken": "^8.5.1",
         "stripe": "^9.2.0"
