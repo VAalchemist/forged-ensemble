@@ -21,6 +21,7 @@
         "bcrypt": "^5.0.1",
         "emailjs-com": "^3.2.0",
         "graphql": "^16.5.0",
+        "howler": "^2.2.3",
         "jsonwebtoken": "^8.5.1",
         "stripe": "^9.2.0"
     }
