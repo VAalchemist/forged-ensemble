@@ -1,4 +1,5 @@
 import React from "react";
+import { HomeD } from "../components/demo.styles";
 import { Howl } from "howler";
 
 function Demo() {
@@ -23,31 +24,31 @@ function Demo() {
   };
 
   return (
-    <div className="absolute w-full h-screen flex justify-center items-center p-4">
-      <button
-        className="h-[18%] w-[18%] bg-blue-700 rounded-[10px] p-2"
+    <div className="fixed w-full h-screen  flex flex-wrap justify-around items-center p-[8rem]">
+      <HomeD
+        className="h-[8rem] w-[8rem] bg-blue-700 rounded-[10px] p-2"
         onClick={() => Beats(beat)}
       >
         Beat
-      </button>
-      <button
-        className="h-[18%] w-[18%] bg-pink-500 rounded-[10px]"
+      </HomeD>
+      <HomeD
+        className="h-[8rem] w-[8rem] bg-pink-500 rounded-[10px]"
         onClick={() => Beats(bass_loop)}
       >
         Bass loop
-      </button>
-      <button
-        className="h-[18%] w-[18%] bg-[#F9EF2B] rounded-[10px]"
+      </HomeD>
+      <HomeD
+        className="h-[8rem] w-[8rem] bg-[#F9EF2B] rounded-[10px]"
         onClick={() => Beats(hi_hats)}
       >
         Hi Hats
-      </button>
-      <button
-        className="h-[18%] w-[18%] bg-[#00DE43] rounded-[10px]"
+      </HomeD>
+      <HomeD
+        className="h-[8rem] w-[8rem] bg-[#00DE43] rounded-[10px]"
         onClick={() => Beats(beat_loop)}
       >
         Beat loop
-      </button>
+      </HomeD>
     </div>
   );
 }

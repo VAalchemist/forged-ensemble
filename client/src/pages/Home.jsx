@@ -8,8 +8,8 @@ import { CgMusicSpeaker, CgMusic } from 'react-icons/cg';
 function Home() {
   return (
     <>
-    <Nav />
     <Demo />
+    <Nav />
     <div className='abosulte h-[15rem] text-white w-full justify-center items-center p-2 hidden md:flex'>
       <CgMusic size={15} />
       <CgMusicSpeaker size={40} />
