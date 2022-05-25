@@ -3,7 +3,6 @@ import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
 import {
   BlueBeatPad,
-  HoverBlue,
   PinkBeatPad,
   GreenBeatPad,
   OrangeBeatPad
