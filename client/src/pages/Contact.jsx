@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { LogOut } from "../components/nav.styles";
-import { Text, Input, Thanks } from "../components/contact.styles";
+import { Text, Input} from "../components/contact.styles";
 import Nav from '../pages/Nav';
-import emailjs from "emailjs-com";
+
 
 
 
@@ -19,23 +19,6 @@ function Contact() {
     feedbackEl.setAttribute("class", "feedback hide");
   }, 4000);
 
-    emailjs
-      .sendForm(
-        "service_phbjoyn",
-        "template_klqoxnq",
-        form.current,
-        "KfGVyjhX_IvddnHea"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-
-    e.target.reset();
   };
   return (
     <>
