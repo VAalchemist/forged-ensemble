@@ -2,13 +2,14 @@ import tw from 'tailwind-styled-components';
 
 
 export const BeatPad = tw.button`
-w-28
-sm:w-40
-md:w-full
-h-28
-sm:h-36
-md:h-60
-lg:h-72
+w-20
+sm:w-32
+md:w-36
+lg:w-40 
+h-20
+sm:h-32
+md:h-36
+lg:h-40
 shadow-2xl
 shadow-orange-100
 pb-full

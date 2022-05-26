@@ -85,10 +85,9 @@ function Studio() {
         Beats(v);
         break;
     default:
-      return; // Quit when this doesn't handle the key event.
+      return;
   }
 
-  // Cancel the default action to avoid it being handled twice
   event.preventDefault();
   }, true);
   
@@ -107,8 +106,8 @@ function Studio() {
   Howler.volume(0.5);
 
   return (
-    <div className=' max-w-screen-lg p-4 mx-auto mt-20 lg:mt-2'>
-      <div className='grid grid-cols-4 md:grid-cols-3 gap-4 '>
+    <div className='flex justify-center items-center max-w-screen-lg h-screen p-2 mx-auto'>
+      <div className='grid grid-cols-4 gap-4 '>
         <Background autoPlay loop muted  >
           <source src={music} type="video/mp4" />
         </Background>
