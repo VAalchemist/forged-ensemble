@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import music from "../images/home.mp4";
 import { Background, BgImg } from "../components/login.styles";
 import Logo from "../images/board.png";
-import { NavItem, LogOut, Ham, Li } from "../components/nav.stlyes";
+import { NavItem, LogOut, Ham, Li } from "../components/nav.styles";
 import Music from '../images/MainBG.png';
 
 function Nav() {
