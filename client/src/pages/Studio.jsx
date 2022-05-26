@@ -1,6 +1,6 @@
 import { Howl, Howler } from 'howler';
-// import music from "../images/home.mp4";
-// import { Background } from "../components/login.styles";
+import music from "../images/home.mp4";
+import { Background } from "../components/login.styles";
 import {
   BlueBeatPad,
   PinkBeatPad,
@@ -40,6 +40,37 @@ function Studio() {
   const v = (V);
   
 
+  window.addEventListener("keydown", function (event) {
+    if (event.defaultPrevented) {
+      return; //do nothing if already processed
+    }
+
+    console.log(event.key);
+
+    switch (event.key) {
+    case "q":
+        Beats(q);
+      break;
+    case "w":
+      Beats(w);
+      break;
+    case "e":
+      Beats(q);
+      break;
+    case "r":
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
+
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+  }, true);
+  
+
+
+
+
   const Beats = (src) => {
     const sound = new Howl({
       src,
@@ -53,23 +84,23 @@ function Studio() {
   return (
     <div className=' max-w-screen-lg p-4 mx-auto mt-20 lg:mt-2'>
       <div className='grid grid-cols-4 md:grid-cols-3 gap-4 '>
-        {/* <Background autoPlay loop muted  >
+        <Background autoPlay loop muted  >
           <source src={music} type="video/mp4" />
         </Background>
-         */}
         
-        <BlueBeatPad onClick={() => Beats(q)} data-note='Q'>Q</BlueBeatPad>
-        <OrangeBeatPad id='1'  data-note='W'>W</OrangeBeatPad>
-        <PinkBeatPad id='2' data-note='E'>E</PinkBeatPad>
-        <GreenBeatPad id='3' data-note='R'>R</GreenBeatPad>
-        <BlueBeatPad id='4' data-note='A'>A</BlueBeatPad>
-        <OrangeBeatPad id='5' data-note='S'>S</OrangeBeatPad>
-        <PinkBeatPad id='6' data-note='D'>D</PinkBeatPad>
-        <GreenBeatPad id='7' data-note='F'>F</GreenBeatPad>
-        <BlueBeatPad id='8' data-note='Z'>Z</BlueBeatPad>
-        <OrangeBeatPad id='9' data-note='X'>X</OrangeBeatPad>
-        <PinkBeatPad id='10' data-note='C'>C</PinkBeatPad>
-        <GreenBeatPad id='11' data-note='V'>V</GreenBeatPad>
+        
+        <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'>Q</BlueBeatPad>
+        <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'>W</OrangeBeatPad>
+        <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'>E</PinkBeatPad>
+        <GreenBeatPad id='3' onClick={() => Beats(r)} data-note='R'>R</GreenBeatPad>
+        <BlueBeatPad id='4' onClick={() => Beats(a)} data-note='A'>A</BlueBeatPad>
+        <OrangeBeatPad id='5' onClick={() => Beats(s)} data-note='S'>S</OrangeBeatPad>
+        <PinkBeatPad id='6' onClick={() => Beats(d)} data-note='D'>D</PinkBeatPad>
+        <GreenBeatPad id='7' onClick={() => Beats(f)} data-note='F'>F</GreenBeatPad>
+        <BlueBeatPad id='8' onClick={() => Beats(z)} data-note='Z'>Z</BlueBeatPad>
+        <OrangeBeatPad id='9' onClick={() => Beats(x)} data-note='X'>X</OrangeBeatPad>
+        <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'>C</PinkBeatPad>
+        <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'>V</GreenBeatPad>
 
       </div>
   </div>
