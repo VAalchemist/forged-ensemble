@@ -108,19 +108,19 @@ function Studio() {
 
   return (
     
-    <div className='flex justify-center items-center max-w-screen-lg h-screen '>
+    <div className='flex justify-center items-center w-full h-screen '>
       <div >
         <Background autoPlay loop muted  >
           <source src={music} type="video/mp4" />
         </Background>
         
 
-        <div className='relative flex justify-left items-center'>
-          <img className='absolute w-32 mb-8 rounded-full hover:animate-spin hover:ml-28 hover:duration-1000' src={record} alt="" />
-          <p className='text-red-500 text-center font-semibold text-xs mb-8 ml-4'>For keyboard<br/> accessibility,<br/> use the<br/> following keys:<br/> Q W E R A S<br/> D F Z X C V</p>
+        <div className='relative flex  items-center'>
+          <img className='absolute w-32 md:w-40 md:mb-12 mb-8 rounded-full hover:animate-spin hover:ml-28 md:hover:ml-32 hover:duration-1000' src={record} alt="" />
+          <p className='text-red-500 text-center font-semibold md:text-sm text-xs md:mb-12 mb-8 md:ml-6 ml-4'>For keyboard<br/> accessibility,<br/> use the<br/> following keys:<br/> Q W E R A S<br/> D F Z X C V</p>
         </div>
         
-        <div className='grid grid-cols-4 gap-2 md:gap-4 lg:gap-6'>
+        <div className='grid grid-cols-4  gap-2 md:gap-4 lg:gap-6'>
           <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'>Q</BlueBeatPad>
         <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'>W</OrangeBeatPad>
         <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'>E</PinkBeatPad>
