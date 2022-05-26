@@ -115,8 +115,9 @@ function Studio() {
         </Background>
         
 
-        <div className='flex justify-left items-center'>
-          <img className='w-28 mb-8 rounded-full hover:animate-spin hover:ml-28 hover:duration-1000' src={record} alt="" />
+        <div className='relative flex justify-left items-center'>
+          <img className='absolute w-32 mb-8 rounded-full hover:animate-spin hover:ml-28 hover:duration-1000' src={record} alt="" />
+          <p className='text-red-500 text-center font-semibold text-xs mb-8 ml-4'>For keyboard<br/> accessibility,<br/> use the<br/> following keys:<br/> Q W E R A S<br/> D F Z X C V</p>
         </div>
         
         <div className='grid grid-cols-4 gap-2 md:gap-4 lg:gap-6'>
