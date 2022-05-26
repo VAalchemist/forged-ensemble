@@ -7,9 +7,10 @@ w-32
 md:w-40
 md:mb-12
 mb-8
+ml-2
 rounded-full
 hover:animate-spin
-hover:ml-28
+hover:ml-32
 md:hover:ml-32
 hover:duration-1000
 
@@ -24,7 +25,7 @@ text-xs
 md:mb-12
 mb-8
 md:ml-6
-ml-4
+ml-8
 
 
 `;
