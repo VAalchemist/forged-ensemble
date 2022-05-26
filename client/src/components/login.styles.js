@@ -3,8 +3,8 @@ import styled, {keyframes} from 'styled-components';
 
 export const Background = styled.video`
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 50%;
   left: 50%;
   object-fit: cover;
@@ -14,7 +14,7 @@ export const Background = styled.video`
   margin: 0 auto;
 `;
 
-export const LoginImg = styled.img`
+export const BgImg = styled.img`
   position: absolute;
   width: 100%;
   height: 100%;
