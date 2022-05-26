@@ -21,10 +21,13 @@ import X from '../drum kit/shortHH.wav';
 import C from '../drum kit/shortkick.wav';
 import V from '../drum kit/shortshake.wav';
 
+import Auth from '../utils/auth';
+import Nav from '../pages/Nav';
 
 
 
 function Studio() {
+  Auth.loggedIn()
 
   const q = (Q);
   const w = (W);
@@ -38,7 +41,7 @@ function Studio() {
   const x = (X);
   const c = (C);
   const v = (V);
-  
+
 
   window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
@@ -48,15 +51,15 @@ function Studio() {
     console.log(event.key);
 
     switch (event.key) {
-    case "q":
+      case "q":
         Beats(q);
-      break;
-    case "w":
-      Beats(w);
-      break;
-    case "e":
-      Beats(e);
-      break;
+        break;
+      case "w":
+        Beats(w);
+        break;
+      case "e":
+        Beats(e);
+        break;
       case "r":
         Beats(r);
         break;
@@ -84,14 +87,14 @@ function Studio() {
       case "v":
         Beats(v);
         break;
-    default:
-      return; // Quit when this doesn't handle the key event.
-  }
+      default:
+        return; // Quit when this doesn't handle the key event.
+    }
 
-  // Cancel the default action to avoid it being handled twice
-  event.preventDefault();
+    // Cancel the default action to avoid it being handled twice
+    event.preventDefault();
   }, true);
-  
+
 
 
 
@@ -107,28 +110,32 @@ function Studio() {
   Howler.volume(0.5);
 
   return (
-    <div className=' max-w-screen-lg p-4 mx-auto mt-20 lg:mt-2'>
-      <div className='grid grid-cols-4 md:grid-cols-3 gap-4 '>
-        <Background autoPlay loop muted  >
-          <source src={music} type="video/mp4" />
-        </Background>
-        
-        
-        <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'>Q</BlueBeatPad>
-        <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'>W</OrangeBeatPad>
-        <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'>E</PinkBeatPad>
-        <GreenBeatPad id='3' onClick={() => Beats(r)} data-note='R'>R</GreenBeatPad>
-        <BlueBeatPad id='4' onClick={() => Beats(a)} data-note='A'>A</BlueBeatPad>
-        <OrangeBeatPad id='5' onClick={() => Beats(s)} data-note='S'>S</OrangeBeatPad>
-        <PinkBeatPad id='6' onClick={() => Beats(d)} data-note='D'>D</PinkBeatPad>
-        <GreenBeatPad id='7' onClick={() => Beats(f)} data-note='F'>F</GreenBeatPad>
-        <BlueBeatPad id='8' onClick={() => Beats(z)} data-note='Z'>Z</BlueBeatPad>
-        <OrangeBeatPad id='9' onClick={() => Beats(x)} data-note='X'>X</OrangeBeatPad>
-        <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'>C</PinkBeatPad>
-        <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'>V</GreenBeatPad>
+    <>
+      <Nav />
+      <div className=' max-w-screen-lg p-4 mx-auto mt-20 lg:mt-2'>
+        <div className='grid grid-cols-4 md:grid-cols-3 gap-4 '>
+          <Background autoPlay loop muted  >
+            <source src={music} type="video/mp4" />
+          </Background>
 
+
+          <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'>Q</BlueBeatPad>
+          <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'>W</OrangeBeatPad>
+          <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'>E</PinkBeatPad>
+          <GreenBeatPad id='3' onClick={() => Beats(r)} data-note='R'>R</GreenBeatPad>
+          <BlueBeatPad id='4' onClick={() => Beats(a)} data-note='A'>A</BlueBeatPad>
+          <OrangeBeatPad id='5' onClick={() => Beats(s)} data-note='S'>S</OrangeBeatPad>
+          <PinkBeatPad id='6' onClick={() => Beats(d)} data-note='D'>D</PinkBeatPad>
+          <GreenBeatPad id='7' onClick={() => Beats(f)} data-note='F'>F</GreenBeatPad>
+          <BlueBeatPad id='8' onClick={() => Beats(z)} data-note='Z'>Z</BlueBeatPad>
+          <OrangeBeatPad id='9' onClick={() => Beats(x)} data-note='X'>X</OrangeBeatPad>
+          <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'>C</PinkBeatPad>
+          <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'>V</GreenBeatPad>
+
+        </div>
       </div>
-  </div>
-)}
+    </>
+  )
+}
 
 export default Studio;

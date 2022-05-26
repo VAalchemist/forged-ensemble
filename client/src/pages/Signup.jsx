@@ -27,6 +27,7 @@ function Signup() {
       });
       console.log(error);
       const token = mutationResponse.data.addUser.token;
+      
       Auth.login(token);
 
 

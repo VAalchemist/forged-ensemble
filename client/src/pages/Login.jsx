@@ -11,30 +11,21 @@ import { MdLockOutline } from 'react-icons/md'
 
 
 function Login(props) {
-
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login, { error }, data] = useMutation(LOGIN, { errorPolicy: 'all' });
-
+  const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState.email)
-    console.log(formState.password)
     try {
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
-
       });
-
-
       const token = mutationResponse.data.login.token;
+      console.log(mutationResponse.data);
       Auth.login(token);
     } catch (e) {
-
-      console.log("there is an error " + e);
+      console.log(e);
     }
-
-    console.log("form submitted");
   };
 
   const handleChange = (event) => {
