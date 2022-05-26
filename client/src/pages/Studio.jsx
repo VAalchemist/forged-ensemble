@@ -55,10 +55,35 @@ function Studio() {
       Beats(w);
       break;
     case "e":
-      Beats(q);
+      Beats(e);
       break;
-    case "r":
-      break;
+      case "r":
+        Beats(r);
+        break;
+      case "a":
+        Beats(a);
+        break;
+      case "s":
+        Beats(s);
+        break;
+      case "d":
+        Beats(d);
+        break;
+      case "f":
+        Beats(f);
+        break;
+      case "z":
+        Beats(z);
+        break;
+      case "x":
+        Beats(x);
+        break;
+      case "c":
+        Beats(c);
+        break;
+      case "v":
+        Beats(v);
+        break;
     default:
       return; // Quit when this doesn't handle the key event.
   }
