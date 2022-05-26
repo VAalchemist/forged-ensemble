@@ -7,8 +7,8 @@ export const Feed = styled.h1`
     color: transparent;
   
     -webkit-text-stroke: 1px #fff;
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVIkfT_oNPeWrS6sRdbnGwwhiGTmAf7XB4OQ&usqp=CAU");
-    /* background: url("https://alikhan.dev/download/back.png"); */
+      /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVIkfT_oNPeWrS6sRdbnGwwhiGTmAf7XB4OQ&usqp=CAU"); */
+    background: url("https://alikhan.dev/download/back.png");
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 60s linear infinite;

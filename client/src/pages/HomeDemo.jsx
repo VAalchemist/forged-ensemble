@@ -1,8 +1,10 @@
 import React from "react";
 import { HomeD } from "../components/demo.styles";
 import { Howl } from "howler";
+import note_A from '../notes/notes_A.mp3'
 
 function Demo() {
+const noteA = (note_A)
   const beat =
     "https://d9olupt5igjta.cloudfront.net/samples/sample_files/134020/a547d3a9c73cd76c18a2b33e32f51c8c8ea89e0c/mp3/_Merged_TET_808_1.mp3";
 
