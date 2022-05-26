@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import Tunnel from '../images/login.mp4'
-import { Background, LoginImg, Zoom } from '../components/login.styles'
+import { Background, BgImg, Zoom } from '../components/login.styles'
 import loginimg from '../images/loginImg.png'
 import { FaFacebookF, FaGoogle, FaTwitter, FaRegEnvelope } from 'react-icons/fa'
 import { MdLockOutline } from 'react-icons/md'
@@ -50,7 +50,7 @@ function Login(props) {
       <Background autoPlay loop muted>
         <source src={Tunnel} type="video/mp4" />
       </Background>
-      <LoginImg src={loginimg} />
+      <BgImg src={loginimg} />
 
 
       <main className='md:flex hidden flex-col items-center justify-center min-h-screen py-2'>
