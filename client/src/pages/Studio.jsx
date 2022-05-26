@@ -108,14 +108,18 @@ function Studio() {
 
   return (
     
-    <div className='flex justify-center items-center max-w-screen-lg h-screen p-2 mx-auto'>
+    <div className='flex justify-center items-center max-w-screen-lg h-screen '>
       <div >
         <Background autoPlay loop muted  >
           <source src={music} type="video/mp4" />
         </Background>
         
+
+        <div className='flex justify-center items-center'>
+          <img className='w-20 mb-4 rounded-full' src={record} alt="" />
+        </div>
         
-        <div className='grid grid-cols-4 gap-4 '>
+        <div className='grid grid-cols-4 gap-2 md:gap-4 lg:gap-6'>
           <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'>Q</BlueBeatPad>
         <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'>W</OrangeBeatPad>
         <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'>E</PinkBeatPad>
