@@ -2,9 +2,9 @@ import styled, {keyframes} from 'styled-components';
 
 
 export const Background = styled.video`
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   top: 50%;
   left: 50%;
   object-fit: cover;

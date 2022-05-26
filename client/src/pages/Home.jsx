@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
 import Logo from "../images/board.png";
-import { NavItem, LogOut, Ham, Li } from "../components/nav.stlyes";
+import { NavItem, LogOut, Ham, Li } from "../components/nav.styles";
 
 function Home() {
   const [nav, setNav] = useState(false);
@@ -19,7 +19,7 @@ function Home() {
 
       <nav className="fixed w-full h-[80px] flex justify-between items-center px-4">
         <div>
-          <img src={Logo} alt="Logo Image" style={{ width: "170px" }} />
+          <img src={Logo} alt="neon soundboard" style={{ width: "170px" }} />
         </div>
 
         <div className=" gap-5 hidden md:flex">
