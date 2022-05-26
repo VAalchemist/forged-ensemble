@@ -115,8 +115,8 @@ function Studio() {
         </Background>
         
 
-        <div className='flex justify-center items-center'>
-          <img className='w-20 mb-4 rounded-full' src={record} alt="" />
+        <div className='flex justify-left items-center'>
+          <img className='w-28 mb-8 rounded-full hover:animate-spin hover:ml-28 hover:duration-1000' src={record} alt="" />
         </div>
         
         <div className='grid grid-cols-4 gap-2 md:gap-4 lg:gap-6'>
