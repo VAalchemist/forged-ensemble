@@ -3,6 +3,9 @@ import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
 import record from '../images/record.jpg';
 import {
+  Record,
+  RecordTxt,
+  SoundBoard,
   BlueBeatPad,
   PinkBeatPad,
   GreenBeatPad,
@@ -116,24 +119,24 @@ function Studio() {
         
 
         <div className='relative flex  items-center'>
-          <img className='absolute w-32 md:w-40 md:mb-12 mb-8 rounded-full hover:animate-spin hover:ml-28 md:hover:ml-32 hover:duration-1000' src={record} alt="" />
-          <p className='text-red-500 text-center font-semibold md:text-sm text-xs md:mb-12 mb-8 md:ml-6 ml-4'>For keyboard<br/> accessibility,<br/> use the<br/> following keys:<br/> Q W E R A S<br/> D F Z X C V</p>
+          <Record src={record} alt="" />
+          <RecordTxt>For keyboard<br/> accessibility,<br/> use the<br/> following keys:<br/> Q W E R A S<br/> D F Z X C V</RecordTxt>
         </div>
         
-        <div className='grid grid-cols-4  gap-2 md:gap-4 lg:gap-6'>
+        <SoundBoard>
           <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'></BlueBeatPad>
-        <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'></OrangeBeatPad>
-        <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'></PinkBeatPad>
-        <GreenBeatPad id='3' onClick={() => Beats(r)} data-note='R'></GreenBeatPad>
-        <BlueBeatPad id='4' onClick={() => Beats(a)} data-note='A'></BlueBeatPad>
-        <OrangeBeatPad id='5' onClick={() => Beats(s)} data-note='S'></OrangeBeatPad>
-        <PinkBeatPad id='6' onClick={() => Beats(d)} data-note='D'></PinkBeatPad>
-        <GreenBeatPad id='7' onClick={() => Beats(f)} data-note='F'></GreenBeatPad>
-        <BlueBeatPad id='8' onClick={() => Beats(z)} data-note='Z'></BlueBeatPad>
-        <OrangeBeatPad id='9' onClick={() => Beats(x)} data-note='X'></OrangeBeatPad>
-        <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'></PinkBeatPad>
-        <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'></GreenBeatPad>
-        </div>
+          <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'></OrangeBeatPad>
+          <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'></PinkBeatPad>
+          <GreenBeatPad id='3' onClick={() => Beats(r)} data-note='R'></GreenBeatPad>
+          <BlueBeatPad id='4' onClick={() => Beats(a)} data-note='A'></BlueBeatPad>
+          <OrangeBeatPad id='5' onClick={() => Beats(s)} data-note='S'></OrangeBeatPad>
+          <PinkBeatPad id='6' onClick={() => Beats(d)} data-note='D'></PinkBeatPad>
+          <GreenBeatPad id='7' onClick={() => Beats(f)} data-note='F'></GreenBeatPad>
+          <BlueBeatPad id='8' onClick={() => Beats(z)} data-note='Z'></BlueBeatPad>
+          <OrangeBeatPad id='9' onClick={() => Beats(x)} data-note='X'></OrangeBeatPad>
+          <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'></PinkBeatPad>
+          <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'></GreenBeatPad>
+        </SoundBoard>
         
 
       </div>

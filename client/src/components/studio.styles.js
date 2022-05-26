@@ -1,6 +1,49 @@
 import tw from 'tailwind-styled-components'; 
 
 
+export const Record = tw.img`
+absolute
+w-32
+md:w-40
+md:mb-12
+mb-8
+rounded-full
+hover:animate-spin
+hover:ml-28
+md:hover:ml-32
+hover:duration-1000
+
+`;
+
+export const RecordTxt = tw.p`
+text-red-500
+text-center
+font-semibold
+md:text-sm
+text-xs
+md:mb-12
+mb-8
+md:ml-6
+ml-4
+
+
+`;
+
+export const SoundBoard = tw.div`
+grid
+grid-cols-4
+gap-2 md:gap-4
+lg:gap-6
+bg-gray-600
+bg-opacity-75
+border-8
+p-2
+border-gray-800
+rounded-xl
+
+`;
+
+
 export const BeatPad = tw.button`
 w-20
 sm:w-32
