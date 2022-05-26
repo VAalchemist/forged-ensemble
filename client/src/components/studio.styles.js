@@ -43,4 +43,3 @@ bg-[#36EB42]
 hover:ring-green-600
 hover:bg-[#84f48b]
 `;
-

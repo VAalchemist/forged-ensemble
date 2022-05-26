@@ -1,6 +1,7 @@
 import { Howl, Howler } from 'howler';
 import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
+import record from '../images/record.jpg';
 import {
   BlueBeatPad,
   PinkBeatPad,
@@ -106,14 +107,16 @@ function Studio() {
   Howler.volume(0.5);
 
   return (
+    
     <div className='flex justify-center items-center max-w-screen-lg h-screen p-2 mx-auto'>
-      <div className='grid grid-cols-4 gap-4 '>
+      <div >
         <Background autoPlay loop muted  >
           <source src={music} type="video/mp4" />
         </Background>
         
         
-        <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'>Q</BlueBeatPad>
+        <div className='grid grid-cols-4 gap-4 '>
+          <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'>Q</BlueBeatPad>
         <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'>W</OrangeBeatPad>
         <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'>E</PinkBeatPad>
         <GreenBeatPad id='3' onClick={() => Beats(r)} data-note='R'>R</GreenBeatPad>
@@ -125,6 +128,8 @@ function Studio() {
         <OrangeBeatPad id='9' onClick={() => Beats(x)} data-note='X'>X</OrangeBeatPad>
         <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'>C</PinkBeatPad>
         <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'>V</GreenBeatPad>
+        </div>
+        
 
       </div>
   </div>
