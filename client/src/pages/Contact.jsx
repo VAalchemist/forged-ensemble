@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import React, { useRef } from "react";
 import { LogOut } from "../components/nav.stlyes";
 import { Text, Input, Thanks } from "../components/contact.styles";
 import Nav from '../pages/Nav';
 import emailjs from "emailjs-com";
 
+=======
+import React from 'react';
+>>>>>>> c2211577c9c2bb6f4e96db2cc6a1711e46b8a476
 
 
 function Contact() {
@@ -39,6 +43,7 @@ function Contact() {
   };
   return (
     <>
+<<<<<<< HEAD
     <Nav />
 
       <div className='w-full h-screen flex justify-center items-center p-4'>
@@ -65,6 +70,9 @@ function Contact() {
           {/* <Thanks className="feedback hide text-white text-4xl text-center font-bold">Thank You!!</Thanks> */}
         </form>
       </div>
+=======
+      Contact HERE!! WOO!
+>>>>>>> c2211577c9c2bb6f4e96db2cc6a1711e46b8a476
     </>
   );
 }

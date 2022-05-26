@@ -12,7 +12,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import Studio from './pages/Studio';
-import background from './/images/electric.jpg';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
