@@ -121,18 +121,18 @@ function Studio() {
         </div>
         
         <div className='grid grid-cols-4  gap-2 md:gap-4 lg:gap-6'>
-          <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'>Q</BlueBeatPad>
-        <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'>W</OrangeBeatPad>
-        <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'>E</PinkBeatPad>
-        <GreenBeatPad id='3' onClick={() => Beats(r)} data-note='R'>R</GreenBeatPad>
-        <BlueBeatPad id='4' onClick={() => Beats(a)} data-note='A'>A</BlueBeatPad>
-        <OrangeBeatPad id='5' onClick={() => Beats(s)} data-note='S'>S</OrangeBeatPad>
-        <PinkBeatPad id='6' onClick={() => Beats(d)} data-note='D'>D</PinkBeatPad>
-        <GreenBeatPad id='7' onClick={() => Beats(f)} data-note='F'>F</GreenBeatPad>
-        <BlueBeatPad id='8' onClick={() => Beats(z)} data-note='Z'>Z</BlueBeatPad>
-        <OrangeBeatPad id='9' onClick={() => Beats(x)} data-note='X'>X</OrangeBeatPad>
-        <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'>C</PinkBeatPad>
-        <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'>V</GreenBeatPad>
+          <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'></BlueBeatPad>
+        <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'></OrangeBeatPad>
+        <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'></PinkBeatPad>
+        <GreenBeatPad id='3' onClick={() => Beats(r)} data-note='R'></GreenBeatPad>
+        <BlueBeatPad id='4' onClick={() => Beats(a)} data-note='A'></BlueBeatPad>
+        <OrangeBeatPad id='5' onClick={() => Beats(s)} data-note='S'></OrangeBeatPad>
+        <PinkBeatPad id='6' onClick={() => Beats(d)} data-note='D'></PinkBeatPad>
+        <GreenBeatPad id='7' onClick={() => Beats(f)} data-note='F'></GreenBeatPad>
+        <BlueBeatPad id='8' onClick={() => Beats(z)} data-note='Z'></BlueBeatPad>
+        <OrangeBeatPad id='9' onClick={() => Beats(x)} data-note='X'></OrangeBeatPad>
+        <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'></PinkBeatPad>
+        <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'></GreenBeatPad>
         </div>
         
 
