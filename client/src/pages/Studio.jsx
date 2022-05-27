@@ -25,10 +25,13 @@ import X from '../drum kit/shortHH.wav';
 import C from '../drum kit/shortkick.wav';
 import V from '../drum kit/shortshake.wav';
 
+import Auth from '../utils/auth';
+import Nav from '../pages/Nav';
 
 
 
 function Studio() {
+  Auth.loggedIn()
 
   const q = (Q);
   const w = (W);
@@ -42,7 +45,7 @@ function Studio() {
   const x = (X);
   const c = (C);
   const v = (V);
-  
+
 
   window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
@@ -52,15 +55,15 @@ function Studio() {
     console.log(event.key);
 
     switch (event.key) {
-    case "q":
+      case "q":
         Beats(q);
-      break;
-    case "w":
-      Beats(w);
-      break;
-    case "e":
-      Beats(e);
-      break;
+        break;
+      case "w":
+        Beats(w);
+        break;
+      case "e":
+        Beats(e);
+        break;
       case "r":
         Beats(r);
         break;
@@ -94,7 +97,7 @@ function Studio() {
 
   event.preventDefault();
   }, true);
-  
+
 
 
 
@@ -110,7 +113,8 @@ function Studio() {
   Howler.volume(0.5);
 
   return (
-    
+    <>
+    <Nav/>
     <div className='flex justify-center items-center w-full h-screen '>
       <div >
         <Background autoPlay loop muted  >
@@ -137,10 +141,12 @@ function Studio() {
           <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'></PinkBeatPad>
           <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'></GreenBeatPad>
         </SoundBoard>
-        
+      
 
+        </div>
       </div>
-  </div>
-)}
+    </>
+  )
+}
 
 export default Studio;

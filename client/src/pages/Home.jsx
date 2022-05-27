@@ -3,9 +3,12 @@ import Nav from './Nav'
 import Demo from './HomeDemo'
 import { Feed } from '../components/home.styles'
 import { CgMusicSpeaker, CgMusic } from 'react-icons/cg';
+import Auth from '../utils/auth';
 
 
 function Home() {
+  Auth.loggedIn()
+
   return (
     <>
     <Demo />
