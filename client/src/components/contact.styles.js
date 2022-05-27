@@ -9,7 +9,7 @@ export const Text = styled.textarea`
     transition: all 0.5s ease;
     /* background: black; */
     font-weight: bold;
-    z-index: -1;
+    z-index: -2;
     &:hover {
         transform: scale(1.05);
         box-shadow: 0 0 1px #ff006e,
@@ -29,7 +29,7 @@ export const Input = styled.input`
     transition: all 0.5s ease;
     /* background: black; */
     font-weight: bold;
-    z-index: -1;
+    z-index: -2;
     &:hover {
         transform: scale(1.05);
         box-shadow: 0 0 1px #ff006e,
