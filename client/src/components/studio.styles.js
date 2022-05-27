@@ -13,7 +13,6 @@ hover:animate-spin
 hover:ml-32
 md:hover:ml-32
 hover:duration-1000
-
 `;
 
 export const RecordTxt = tw.p`
@@ -26,16 +25,17 @@ md:mb-12
 mb-8
 md:ml-6
 ml-8
-
 `;
 
 export const Controls = tw.button`
-  hover:border-b
-  hover:border-teal-200
-  hover:text-teal-300
-  rounded-full
-  p-1
-  md:p-4  
+hover:border-b
+hover:border-teal-200
+hover:text-teal-300
+rounded-full
+hover:shadow-2xl
+hover:shadow-indigo-600
+p-1
+md:p-4  
 `;
 
 export const SoundBoard = tw.div`
@@ -49,15 +49,19 @@ border-8
 p-2
 border-gray-800
 rounded-xl
-
 `;
 
-export const SoundBoardBtns = tw(SoundBoard)`
-  border-4
-  bg-opacity-40
-  mr-2
-  mt-12
-  text-purple-900
+export const SoundBoardBtns = tw.div`
+flex
+flex-col
+sm:flex-row
+border-4
+border-gray-800
+bg-gray-600
+bg-opacity-40
+rounded-xl
+m-2
+text-purple-900
 `;
 
 
@@ -71,7 +75,7 @@ sm:h-32
 md:h-36
 lg:h-40
 shadow-2xl
-shadow-orange-100
+shadow-indigo-300
 pb-full
 rounded-xl
 hover:ring-8
