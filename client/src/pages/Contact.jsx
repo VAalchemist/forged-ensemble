@@ -3,6 +3,7 @@ import { LogOut } from "../components/nav.styles";
 import { Text, Input, Thanks } from "../components/contact.styles";
 import Nav from '../pages/Nav';
 import emailjs from "emailjs-com";
+import Cards from './Cards';
 
 
 
@@ -64,7 +65,9 @@ function Contact() {
           </LogOut>
           {/* <Thanks className="feedback hide text-white text-4xl text-center font-bold">Thank You!!</Thanks> */}
         </form>
-      </div>
+       </div>
+       <Cards />
+       
     </>
   );
 }

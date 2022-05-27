@@ -1,5 +1,4 @@
 import React from "react";
-import { HomeD } from "../components/demo.styles";
 import {
     BlueBeatPad,
     PinkBeatPad,
@@ -29,7 +28,7 @@ function Demo() {
   };
 
   return (
-    <div className="fixed w-full h-screen  flex flex-wrap justify-around items-center p-[8rem] mx-auto mt-20 lg:mt-2">
+    <div className="fixed w-full h-screen flex flex-wrap justify-around items-center p-[8rem] mx-auto mt-20 bottom-[2rem]">
       <div className='grid grid-cols-2 md:grid-cols-2 gap-4'>
       <BlueBeatPad
         className="h-[8rem] w-[8rem] bg-blue-700 rounded-[10px] p-2"

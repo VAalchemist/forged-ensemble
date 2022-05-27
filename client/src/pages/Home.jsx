@@ -10,7 +10,7 @@ function Home() {
     <>
     <Demo />
     <Nav />
-    <div className='abosulte h-[15rem] text-white w-full justify-center items-center p-2 hidden md:flex'>
+    <div className='abosulte h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
       <CgMusic size={15} />
       <CgMusicSpeaker size={40} />
       <Feed>Feed Coming Soon </Feed>
