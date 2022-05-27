@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const Files = require('./Files');
 
 const { Schema } = mongoose;
 
@@ -23,6 +24,9 @@ const userSchema = new Schema({
       type: String,
       required: true,
       minlength: 5
+    },
+    profile_pic: {
+      type: String
     }
 });
 // set up pre-save middleware to create password

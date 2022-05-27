@@ -18,11 +18,17 @@
     },
     "dependencies": {
         "@apollo/client": "^3.6.4",
+        "axios": "^0.27.2",
         "bcrypt": "^5.0.1",
+        "cloudinary": "^1.30.0",
+        "crypto-browserify": "^3.12.0",
         "emailjs-com": "^3.2.0",
         "graphql": "^16.5.0",
         "howler": "^2.2.3",
         "jsonwebtoken": "^8.5.1",
-        "stripe": "^9.2.0"
+        "path-browserify": "^1.0.1",
+        "react-dropzone": "^14.2.1",
+        "stripe": "^9.2.0",
+        "url": "^0.11.0"
     }
 }
