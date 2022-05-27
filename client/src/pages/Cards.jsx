@@ -14,7 +14,8 @@ function Cards() {
         
         <div className="text-center justify-between w-full mb-10">
         <p className='mb-10 font-bold'>Edd-Arlo Garcia</p>
-            <a href="https://github.com/Eddielo26"> 
+            <a href="https://github.com/Eddielo26" target="_blank"
+          rel="noreferrer"> 
             <img src={Arlo}/>
             </a>
           </div>
@@ -25,7 +26,8 @@ function Cards() {
         
           <div className="text-center justify-between w-full mb-10">
            <p className='mb-10 font-bold'>Justyn Subrai</p>
-            <a href="https://github.com/JustynSubrai"> 
+            <a href="https://github.com/JustynSubrai" target="_blank"
+          rel="noreferrer"> 
             <img src={Justyn}/>
             </a>
           </div>
@@ -36,7 +38,8 @@ function Cards() {
         
         <div className="text-center justify-between w-full mb-10">
         <p className='mb-10 font-bold'>Kevin Castillo</p>
-            <a className=""href="https://github.com/kcastil7"> 
+            <a className=""href="https://github.com/kcastil7" target="_blank"
+          rel="noreferrer"> 
             <img src={Kevin}/>
             </a>
           </div>
@@ -47,7 +50,8 @@ function Cards() {
         
         <div className="text-center justify-between w-full mb-10">
         <p className='mb-10 font-bold'>Charlene Kim</p>
-            <a className=""href="https://github.com/VAalchemist"> 
+            <a className=""href="https://github.com/VAalchemist" target="_blank"
+          rel="noreferrer"> 
             <img src={Char}/>
             </a>
           </div>

@@ -33,7 +33,7 @@ function Nav() {
       </Background>
       <BgImg src={Music}/>
 
-      <nav className="fixed w-full h-[80px] flex justify-between items-center px-4">
+      <nav className="fixed w-full h-[80px] flex justify-between items-center px-4 z-10">
         <div>
           <a href="/">
           <img src={Logo} alt="Logo Image" style={{ width: "170px" }}/>

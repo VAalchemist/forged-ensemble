@@ -19,6 +19,7 @@ hover:duration-500
 active:duration-500
 `;
 
+
 export const BlueBeatPad = tw(BeatPad)`
 bg-[#00dfff]
 hover:ring-cyan-600
