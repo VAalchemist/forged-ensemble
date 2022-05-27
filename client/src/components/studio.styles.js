@@ -30,7 +30,9 @@ ml-8
 `;
 
 export const Controls = tw.button`
-
+  border
+  rounded-full
+  p-1  
 `;
 
 export const SoundBoard = tw.div`
@@ -48,8 +50,11 @@ rounded-xl
 `;
 
 export const SoundBoardBtns = tw(SoundBoard)`
-  
-
+  border-4
+  bg-opacity-50
+  mr-2
+  mt-12
+  text-purple-900
 `;
 
 

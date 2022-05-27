@@ -5,7 +5,7 @@ import record from '../images/record.jpg';
 import {
   MdSave,
   MdStop,
-  MdPlayCircleOutline,
+  MdPlayArrow,
   MdFiberManualRecord
 } from 'react-icons/md';
 import {
@@ -133,10 +133,10 @@ function Studio() {
           
           <SoundBoardBtns>
 
-            <Controls><MdFiberManualRecord /></Controls>
-            <Controls><MdStop /></Controls>
-            <Controls><MdPlayCircleOutline /></Controls>
-            <Controls><MdSave /></Controls>
+            <Controls><MdFiberManualRecord size={30} /></Controls>
+            <Controls><MdStop size={30} /></Controls>
+            <Controls><MdPlayArrow size={30} /></Controls>
+            <Controls><MdSave size={30} /></Controls>
 
 
           </SoundBoardBtns>
