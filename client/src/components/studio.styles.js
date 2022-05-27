@@ -34,6 +34,7 @@ hover:text-teal-300
 rounded-full
 hover:shadow-2xl
 hover:shadow-indigo-600
+active:text-lime-500
 p-1
 md:p-4  
 `;

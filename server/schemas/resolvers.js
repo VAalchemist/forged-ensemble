@@ -11,7 +11,7 @@ const resolvers = {
 
     singleUser: async (parent,args) => {
       return User.findById(args._id)
-  },
+    }
   },
 
 
@@ -44,7 +44,7 @@ const resolvers = {
 
     addPic: async (parent, args) => {
       await User.findByIdAndUpdate(args._id, {profile_pic: args.profile_pic})
-    }
+    },
 
     
   }
