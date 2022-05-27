@@ -55,12 +55,14 @@ export const SoundBoardBtns = tw.div`
 flex
 flex-col
 sm:flex-row
+sm:justify-center
 border-4
 border-gray-800
 bg-gray-600
 bg-opacity-40
 rounded-xl
 m-2
+sm:w-2/4
 text-purple-900
 `;
 
