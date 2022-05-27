@@ -1,11 +1,19 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
 const db = require('./config/connection');
+const cloudinary = require('cloudinary');
 
+
+
+
+cloudinary.config({ 
+  cloud_name: "duty-call", 
+  api_key: "257286223242913", 
+  api_secret: "cAeNrIR3rdKx-wx0LZDQNnMHxRw" 
+});
 
 
 

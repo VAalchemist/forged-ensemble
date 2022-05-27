@@ -14,10 +14,17 @@ import { Background, BgImg } from "../components/login.styles";
 import Logo from "../images/board.png";
 import { NavItem, LogOut, Ham, Li } from "../components/nav.styles";
 import Music from '../images/MainBG.png';
+import Auth from '../utils/auth';
 
 function Nav() {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+
+  const handleLogout = () => {
+    console.log("log out pressed")
+    Auth.logout();
+
+  }
 
   return (
     <>
@@ -28,7 +35,9 @@ function Nav() {
 
       <nav className="fixed w-full h-[80px] flex justify-between items-center px-4">
         <div>
-          <img src={Logo} alt="Logo Image" style={{ width: "170px" }} />
+          <a href="/">
+          <img src={Logo} alt="Logo Image" style={{ width: "170px" }}/>
+          </a>
         </div>
 
         <div className=" gap-5 hidden md:flex">
@@ -36,8 +45,8 @@ function Nav() {
           <NavItem to="/profile">Profile</NavItem>
           <NavItem to="/contact">Contact</NavItem>
           {/* connect to logout screen */}
-          <LogOut type="submit">
-            <a href="/login">Log Out</a>
+          <LogOut type="submit"  onClick={handleLogout}>
+            Log Out
           </LogOut>
         </div>
 
@@ -88,7 +97,7 @@ function Nav() {
           <br />
           <Li className="mb-16 text-4xl">
             <button className="font-bold" type="submit">
-            <a href="/login">Log Out</a>
+            Log Out
             </button>
           </Li>
           <br />

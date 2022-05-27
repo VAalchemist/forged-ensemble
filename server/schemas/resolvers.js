@@ -9,8 +9,12 @@ const resolvers = {
         return User.find()
     },
 
-
+    singleUser: async (parent,args) => {
+      return User.findById(args._id)
   },
+  },
+
+
 
   Mutation: {
     addUser: async (parent, args) => {
@@ -33,10 +37,13 @@ const resolvers = {
         throw new AuthenticationError('Incorrect credentials');
       }
 
-      // const token = signToken(user);
+      const token = signToken(user);
 
-      // return { token, user };
-      return {user};
+      return { token, user };
+    },
+
+    addPic: async (parent, args) => {
+      await User.findByIdAndUpdate(args._id, {profile_pic: args.profile_pic})
     }
 
     
