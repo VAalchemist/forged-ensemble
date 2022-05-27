@@ -18,6 +18,6 @@ const beatSchema = new Schema({
   }
 });
 
-const Beats = mongoose.model('Beat', beatSchema);
+const Beats = mongoose.model('Beats', beatSchema);
 
 module.exports = Beats;

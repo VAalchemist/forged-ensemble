@@ -15,6 +15,13 @@ const typeDefs = gql`
     user: User
   }
 
+type Beats {
+  _id: ID
+  note: String,
+  startTime: Int,
+  userId: String
+}
+
   type Query {
     user: [User]
   }
@@ -23,10 +30,13 @@ const typeDefs = gql`
     singleUser(_id: ID!): User
   }
 
+
+
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addPic(profile_pic: String!,_id: String!): Boolean
+    addBeat(note: String!, startTime: Int!, userId: String!): Boolean
   }
 
 `;
