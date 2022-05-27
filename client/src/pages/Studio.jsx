@@ -3,13 +3,22 @@ import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
 import record from '../images/record.jpg';
 import {
+  MdSave,
+  MdStop,
+  MdPlayCircleOutline,
+  MdFiberManualRecord
+} from 'react-icons/md';
+import {
   Record,
   RecordTxt,
+  Controls,
   SoundBoard,
+  SoundBoardBtns,
   BlueBeatPad,
   PinkBeatPad,
   GreenBeatPad,
-  OrangeBeatPad
+  OrangeBeatPad,
+  
 } from '../components/studio.styles';
 
 import Q from '../drum kit/bewp.wav';
@@ -118,9 +127,19 @@ function Studio() {
         </Background>
         
 
-        <div className='relative flex  items-center'>
+        <div className='relative flex justify-between items-center'>
           <Record src={record} alt="" />
-          <RecordTxt>For keyboard<br/> accessibility,<br/> use the<br/> following keys:<br/> Q W E R A S<br/> D F Z X C V</RecordTxt>
+          <RecordTxt>For keyboard<br /> accessibility,<br /> use the<br /> following keys:<br /> Q W E R A S<br /> D F Z X C V</RecordTxt>
+          
+          <SoundBoardBtns>
+
+            <Controls><MdFiberManualRecord /></Controls>
+            <Controls><MdStop /></Controls>
+            <Controls><MdPlayCircleOutline /></Controls>
+            <Controls><MdSave /></Controls>
+
+
+          </SoundBoardBtns>
         </div>
         
         <SoundBoard>

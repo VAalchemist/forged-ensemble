@@ -27,6 +27,9 @@ mb-8
 md:ml-6
 ml-8
 
+`;
+
+export const Controls = tw.button`
 
 `;
 
@@ -41,6 +44,11 @@ border-8
 p-2
 border-gray-800
 rounded-xl
+
+`;
+
+export const SoundBoardBtns = tw(SoundBoard)`
+  
 
 `;
 
