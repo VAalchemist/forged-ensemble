@@ -3,7 +3,7 @@ import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
 import record from '../images/record.jpg';
 import {
-  MdSave,
+  MdOutlineSave,
   MdStop,
   MdPlayArrow,
   MdFiberManualRecord
@@ -136,7 +136,7 @@ function Studio() {
             <Controls><MdFiberManualRecord size={30} /></Controls>
             <Controls><MdStop size={30} /></Controls>
             <Controls><MdPlayArrow size={30} /></Controls>
-            <Controls><MdSave size={30} /></Controls>
+            <Controls><MdOutlineSave size={30} /></Controls>
 
 
           </SoundBoardBtns>
