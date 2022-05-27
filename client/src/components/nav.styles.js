@@ -51,6 +51,7 @@ export const Li = styled.li`
     transition: all 0.5s ease;
     color: #fcacf2;
     font-weight: bolder;
+    z-index: 100;
     &:hover {
         transform: scale(1.1);
         box-shadow: 0 0 1px #ff006e,
@@ -68,6 +69,7 @@ object-fit: fill;
     padding: 0.3rem .7rem;
     border: 3px solid #00bdff;
     transition: all 0.5s ease;
+    z-index: 50;
  color: #fcacf2;
  :hover {
         transform: scale(1.1);

@@ -96,7 +96,7 @@ function Nav() {
           </Li>
           <br />
           <Li className="mb-16 text-4xl">
-            <button className="font-bold" type="submit">
+            <button className="font-bold" type="submit" onClick={handleLogout}>
             Log Out
             </button>
           </Li>
