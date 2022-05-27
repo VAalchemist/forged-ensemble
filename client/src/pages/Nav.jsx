@@ -14,7 +14,6 @@ import { Background, BgImg } from "../components/login.styles";
 import Logo from "../images/board.png";
 import { NavItem, LogOut, Ham, Li } from "../components/nav.styles";
 import Music from '../images/MainBG.png';
-
 import Auth from '../utils/auth';
 
 function Nav() {
@@ -36,7 +35,9 @@ function Nav() {
 
       <nav className="fixed w-full h-[80px] flex justify-between items-center px-4">
         <div>
-          <img src={Logo} alt="Logo Image" style={{ width: "170px" }} />
+          <a href="/">
+          <img src={Logo} alt="Logo Image" style={{ width: "170px" }}/>
+          </a>
         </div>
 
         <div className=" gap-5 hidden md:flex">
