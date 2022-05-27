@@ -32,3 +32,10 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+
+export const ADDPIC = gql`
+  mutation addPic($profile_pic: String!, $_id: String!) {
+    addPic(profile_pic: $profile_pic, _id: $_id) 
+  }
+`;

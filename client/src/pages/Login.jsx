@@ -32,7 +32,7 @@ function Login(props) {
     const { name, value } = event.target;
     setFormState({
       ...formState,
-      [name]: value,
+      [name]:value,
     });
   };
 
