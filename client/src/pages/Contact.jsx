@@ -43,7 +43,7 @@ function Contact() {
     <Nav />
 
       <div className='w-full h-screen flex justify-center items-center p-4'>
-        <form ref={form} onSubmit={sendEmail} className='flex flex-col max-w-[600px] w-full'>
+        <form ref={form} onSubmit={sendEmail} className='flex flex-col max-w-[600px] w-full z-[1] '>
         <div className='pb-8'>
         <p className='text-4xl font-bold border-b-4 border-pink-600 text-white text-center p-4'>Contact Us Here</p>
         </div>
