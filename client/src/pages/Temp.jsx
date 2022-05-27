@@ -68,7 +68,7 @@ function Temp() {
         return (
             <>
                 <Nav />
-                <div className='flex justify-center items-center w-full h-screen text-white'>
+                <div className='abosulte h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
                     <form name='img-form' encType='multipart/form-data'onSubmit={handleSubmit}>
 
                         <input className='text-black' type='text' name='fileName' placeholder='file name'></input>
@@ -78,8 +78,8 @@ function Temp() {
 
                     </form>
                     </div>
-                    <div>
-                    <img src={picState} ></img>
+                    <div className='abosulte h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
+                    <img src={picState} className='w-60'></img>
                 </div>
 
             </>
