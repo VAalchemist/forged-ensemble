@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 
 const beatSchema = new Schema({
-  note: {
+  beat: {
     type: String,
     required: true
   },

@@ -15,9 +15,9 @@ const typeDefs = gql`
     user: User
   }
 
-type Beats {
+  type Beats {
   _id: ID
-  note: String,
+  beat: String,
   startTime: Int,
   userId: String
 }
@@ -30,13 +30,20 @@ type Beats {
     singleUser(_id: ID!): User
   }
 
+type Query {
+  beat: [Beats]
+}
 
+
+type Query {
+  singleBeat(_id: ID!): Beats
+}
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addPic(profile_pic: String!,_id: String!): Boolean
-    addBeat(note: String!, startTime: Int!, userId: String!): Boolean
+    addBeat(beat: String!, startTime: Int!, userId: String!): Boolean
   }
 
 `;

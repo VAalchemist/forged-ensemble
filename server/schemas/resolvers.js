@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User} = require('../models');
+const { User, Beats} = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -11,6 +11,14 @@ const resolvers = {
 
     singleUser: async (parent,args) => {
       return User.findById(args._id)
+    },
+
+    beat: async () => {
+      return Beats.find()
+    },
+
+    singleBeat: async (parent, args) => {
+      return Beats.findById(args._id)
     }
   },
 
@@ -46,7 +54,11 @@ const resolvers = {
       await User.findByIdAndUpdate(args._id, {profile_pic: args.profile_pic})
     },
 
-    
+    addBeat: async (parent, args) => {
+      const beat = await Beat.create(args);
+
+      return { };
+    }
   }
 };
 
