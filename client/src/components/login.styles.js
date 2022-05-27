@@ -22,7 +22,7 @@ export const BgImg = styled.img`
   left: 50%;
   object-fit: cover;
   transform: translate(-50%, -50%);
-  z-index: -2;
+  z-index: -100;
   display: block;
   margin: 0 auto;
 `;
