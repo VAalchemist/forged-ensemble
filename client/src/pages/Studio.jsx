@@ -42,9 +42,9 @@ function Studio() {
         return; //do nothing if already processed
       }
 
-      console.log(event.key);
+      console.log(event.key.toLowerCase());
 
-      switch (event.key) {
+      switch (event.key.toLowerCase()) {
         case "q":
           Beats(q);
           break;
