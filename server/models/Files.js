@@ -12,6 +12,10 @@ const filesSchema = new Schema({
       url: {
           type: String,
           required: true
+      },
+      userId:{
+          type: String,
+          required: true
       }
 
 });
