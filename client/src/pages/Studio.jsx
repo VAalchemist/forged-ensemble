@@ -63,7 +63,7 @@ function Studio() {
 
     console.log(event.key);
 
-    switch (event.key) {
+    switch (event.key.toLowerCase()) {
       case "q":
         Beats(q);
         break;
