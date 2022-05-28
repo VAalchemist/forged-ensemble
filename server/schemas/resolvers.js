@@ -55,9 +55,17 @@ const resolvers = {
     },
 
     addBeat: async (parent, args) => {
-      const beat = await Beat.create(args);
+      const beat = await Beats.create(args);
 
-      return { };
+      return true;
+    },
+
+    removeBeat: async (parent, args) => {
+      const beat = await Beats.deleteOne({ _id: args._id })
+      
+      console.log(beat);
+      return true;
+
     }
   }
 };

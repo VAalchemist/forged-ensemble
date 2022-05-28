@@ -44,6 +44,7 @@ type Query {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addPic(profile_pic: String!,_id: String!): Boolean
     addBeat(beat: String!, startTime: Int!, userId: String!): Boolean
+    removeBeat(beat: String!, startTime: Int!, userId: String!): Boolean
   }
 
 `;
