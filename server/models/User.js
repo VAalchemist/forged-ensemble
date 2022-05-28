@@ -27,7 +27,11 @@ const userSchema = new Schema({
     },
     profile_pic: {
       type: String
-    }
+    }  ,
+    File: [{
+      type: Schema.Types.ObjectId,
+      ref: "Files"
+    }]
 });
 // set up pre-save middleware to create password
 userSchema.pre('save', async function(next) {
