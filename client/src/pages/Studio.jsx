@@ -2,6 +2,8 @@ import { Howl, Howler } from 'howler';
 import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
 import record from '../images/record.jpg';
+import Auth from '../utils/auth';
+import Nav from '../pages/Nav';
 import {
   MdOutlineSave,
   MdStop,
@@ -34,10 +36,6 @@ import X from '../drum kit/shortHH.wav';
 import C from '../drum kit/shortkick.wav';
 import V from '../drum kit/shortshake.wav';
 
-import Auth from '../utils/auth';
-import Nav from '../pages/Nav';
-
-
 
 function Studio() {
   Auth.loggedIn()
@@ -54,6 +52,7 @@ function Studio() {
   const x = (X);
   const c = (C);
   const v = (V);
+
 
 
   window.addEventListener("keydown", function (event) {
