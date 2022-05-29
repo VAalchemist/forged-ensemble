@@ -26,12 +26,8 @@ function Demo() {
   };
 
   return (
-    <div className="fixed w-full h-screen flex flex-wrap justify-around items-center p-[8rem] mx-auto mt-20 bottom-[2rem]">
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-4 bg-gray-600
-bg-opacity-75
-border-8
-p-2
-border-gray-800 rounded-xl">
+    <div className="fixed w-full h-screen flex flex-wrap justify-around items-center mx-auto mt-28 md:mt-12">
+      <div className="grid grid-cols-2 md:grid-cols-2 gap-4 bg-gray-600 bg-opacity-75 border-8 p-2 border-gray-800 rounded-xl">
         {/* <SoundBoard> */}
         <BlueBeatPad
           className="h-[8rem] w-[8rem] rounded-[10px]"
