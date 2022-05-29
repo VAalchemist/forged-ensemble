@@ -42,12 +42,6 @@ function Studio() {
   Auth.loggedIn();
 
 
-<<<<<<< HEAD
-
-  window.addEventListener("keydown", function (event) {
-    if (event.defaultPrevented) {
-      return; //do nothing if already processed
-=======
   useEffect(() => {
 
     function beatpad(event) {
@@ -99,59 +93,15 @@ function Studio() {
       }
 
       event.preventDefault();
->>>>>>> b14ccbe14831b78f066668dd0275ccec3c2eee6a
     }
 
 
-<<<<<<< HEAD
-    switch (event.key.toLowerCase()) {
-      case "q":
-        Beats(q);
-        break;
-      case "w":
-        Beats(w);
-        break;
-      case "e":
-        Beats(e);
-        break;
-      case "r":
-        Beats(r);
-        break;
-      case "a":
-        Beats(a);
-        break;
-      case "s":
-        Beats(s);
-        break;
-      case "d":
-        Beats(d);
-        break;
-      case "f":
-        Beats(f);
-        break;
-      case "z":
-        Beats(z);
-        break;
-      case "x":
-        Beats(x);
-        break;
-      case "c":
-        Beats(c);
-        break;
-      case "v":
-        Beats(v);
-        break;
-    default:
-      return;
-  }
-=======
     window.addEventListener("keydown", beatpad);
     return () => {
       console.log("finished");
       window.removeEventListener('keydown', beatpad)
     }
   })
->>>>>>> b14ccbe14831b78f066668dd0275ccec3c2eee6a
 
 
 const q = (Q);
@@ -197,7 +147,6 @@ return (
         <div className='relative flex justify-between items-center'>
           <Record src={record} alt="" />
           <RecordTxt>For keyboard<br /> accessibility,<br /> use the<br /> following keys:<br /> Q W E R A S<br /> D F Z X C V</RecordTxt>
-<<<<<<< HEAD
           
           <SoundBoardBtns>
 
@@ -208,8 +157,6 @@ return (
 
 
           </SoundBoardBtns>
-=======
->>>>>>> b14ccbe14831b78f066668dd0275ccec3c2eee6a
         </div>
 
         <SoundBoard>
