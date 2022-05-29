@@ -33,7 +33,7 @@ function Nav() {
       </Background>
       <BgImg src={Music}/>
 
-      <nav className="fixed w-full h-[80px] flex justify-between items-center px-4">
+      <nav className="fixed w-full h-[80px] flex justify-between items-center px-4 z-10">
         <div>
           <a href="/">
           <img src={Logo} alt="soundboard" style={{ width: "170px" }}/>
@@ -96,7 +96,7 @@ function Nav() {
           </Li>
           <br />
           <Li className="mb-16 text-4xl">
-            <button className="font-bold" type="submit">
+            <button className="font-bold" type="submit" onClick={handleLogout}>
             Log Out
             </button>
           </Li>

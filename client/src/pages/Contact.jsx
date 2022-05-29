@@ -61,7 +61,7 @@ function Contact() {
             required
           ></Text>
           <LogOut type="submit" className="">
-            Send Message
+            Send Message 
           </LogOut>
           {/* <Thanks className="feedback hide text-white text-4xl text-center font-bold">Thank You!!</Thanks> */}
         </form>
