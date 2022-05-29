@@ -69,9 +69,9 @@ function Signup() {
                 <div className='border-2 w-20 border-[#00b8ff] inline-block mb-2'></div>
                 {/* Social Sign-Up */}
                 <div className='flex justify-center my-2'>
-                  <a href='#' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaFacebookF className='text-sm' /></a>
-                  <a href='#' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaTwitter className='text-sm' /></a>
-                  <a href='#' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaGoogle className='text-sm' /></a>
+                  <a href='/' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaFacebookF className='text-sm' /></a>
+                  <a href='/' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaTwitter className='text-sm' /></a>
+                  <a href='/' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaGoogle className='text-sm' /></a>
                 </div>
 
                 <p className='text-white my-3'>or sign up with email</p>
@@ -121,7 +121,7 @@ function Signup() {
       </main>
 
        {/* mobile view */}
-       <main className='flex flex-col items-center justify-center min-h-screen py-2'>
+      <main className='flex flex-col items-center justify-center min-h-screen py-2'>
         <Zoom className='border-2 border-[#00b8ff] rounded-xl flex flex-col items-center w-full px-24 m-5 text-center'>
             {/* login */}
             <div className="w-5/5 p-5 text-white rounded-tl-2xl rounded-bl-2xl">
@@ -131,9 +131,9 @@ function Signup() {
                 <div className='border-2 w-20 border-[#00b8ff] inline-block mb-2'></div>
                 {/* Social Login */}
                 <div className='flex justify-center my-2'>
-                  <a href='#' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaFacebookF className='text-sm' /></a>
-                  <a href='#' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaTwitter className='text-sm' /></a>
-                  <a href='#' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaGoogle className='text-sm' /></a>
+                  <a href='/' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaFacebookF className='text-sm' /></a>
+                  <a href='/' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaTwitter className='text-sm' /></a>
+                  <a href='/' className='border-2 border-[#00b8ff] rounded-full p-3 mx-1'><FaGoogle className='text-sm' /></a>
               </div>
 
                 <p className='text-white my-3'>or sign up with email</p> 
