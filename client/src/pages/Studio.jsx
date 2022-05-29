@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { Howl, Howler } from 'howler';
 import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
@@ -31,102 +32,116 @@ import Nav from '../pages/Nav';
 
 
 function Studio() {
-  Auth.loggedIn()
-
-  const q = (Q);
-  const w = (W);
-  const e = (E);
-  const r = (R);
-  const a = (A);
-  const s = (S);
-  const d = (D);
-  const f = (F);
-  const z = (Z);
-  const x = (X);
-  const c = (C);
-  const v = (V);
+  Auth.loggedIn();
 
 
-  window.addEventListener("keydown", function (event) {
-    if (event.defaultPrevented) {
-      return; //do nothing if already processed
+  useEffect(() => {
+
+    function beatpad(event) {
+      if (event.defaultPrevented) {
+        return; //do nothing if already processed
+      }
+
+      console.log(event.key.toLowerCase());
+
+      switch (event.key.toLowerCase()) {
+        case "q":
+          Beats(q);
+          break;
+        case "w":
+          Beats(w);
+          break;
+        case "e":
+          Beats(e);
+          break;
+        case "r":
+          Beats(r);
+          break;
+        case "a":
+          Beats(a);
+          break;
+        case "s":
+          Beats(s);
+          break;
+        case "d":
+          Beats(d);
+          break;
+        case "f":
+          Beats(f);
+          break;
+        case "z":
+          Beats(z);
+          break;
+        case "x":
+          Beats(x);
+          break;
+        case "c":
+          Beats(c);
+          break;
+        case "v":
+          Beats(v);
+          break;
+        default:
+          return;
+      }
+
+      event.preventDefault();
     }
 
-    console.log(event.key);
 
-    switch (event.key) {
-      case "q":
-        Beats(q);
-        break;
-      case "w":
-        Beats(w);
-        break;
-      case "e":
-        Beats(e);
-        break;
-      case "r":
-        Beats(r);
-        break;
-      case "a":
-        Beats(a);
-        break;
-      case "s":
-        Beats(s);
-        break;
-      case "d":
-        Beats(d);
-        break;
-      case "f":
-        Beats(f);
-        break;
-      case "z":
-        Beats(z);
-        break;
-      case "x":
-        Beats(x);
-        break;
-      case "c":
-        Beats(c);
-        break;
-      case "v":
-        Beats(v);
-        break;
-    default:
-      return;
-  }
+    window.addEventListener("keydown", beatpad);
+    return () => {
+      console.log("finished");
+      window.removeEventListener('keydown', beatpad)
+    }
+  })
 
-  event.preventDefault();
-  }, true);
+
+const q = (Q);
+const w = (W);
+const e = (E);
+const r = (R);
+const a = (A);
+const s = (S);
+const d = (D);
+const f = (F);
+const z = (Z);
+const x = (X);
+const c = (C);
+const v = (V);
 
 
 
 
 
-  const Beats = (src) => {
-    const sound = new Howl({
-      src,
-      html5: true,
-    });
-    sound.play();
-  };
 
-  Howler.volume(0.5);
 
-  return (
-    <>
-    <Nav/>
+
+const Beats = (src) => {
+  const sound = new Howl({
+    src,
+    html5: true,
+  });
+  sound.play();
+};
+
+Howler.volume(0.5);
+
+return (
+  <>
+    <Nav />
     <div className='flex justify-center items-center w-full h-screen '>
       <div >
         <Background autoPlay loop muted  >
           <source src={music} type="video/mp4" />
         </Background>
-        
+
 
         <div className='relative flex  items-center'>
           <Record src={record} alt="" />
-          <RecordTxt>For keyboard<br/> accessibility,<br/> use the<br/> following keys:<br/> Q W E R A S<br/> D F Z X C V</RecordTxt>
+          <RecordTxt>For keyboard<br /> accessibility,<br /> use the<br /> following keys:<br /> Q W E R A S<br /> D F Z X C V</RecordTxt>
         </div>
-        
+
         <SoundBoard>
           <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'></BlueBeatPad>
           <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'></OrangeBeatPad>
@@ -141,12 +156,12 @@ function Studio() {
           <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'></PinkBeatPad>
           <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'></GreenBeatPad>
         </SoundBoard>
-      
 
-        </div>
+
       </div>
-    </>
-  )
+    </div>
+  </>
+)
 }
 
 export default Studio;
