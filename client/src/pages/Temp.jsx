@@ -46,6 +46,7 @@ function Temp() {
         console.log(Auth.getProfile().data._id);
 
         try {
+            
             const mutationResponse = await addPic({
                 variables: { profile_pic: data.url, _id: Auth.getProfile().data._id},
             });

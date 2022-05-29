@@ -8,6 +8,8 @@ const typeDefs = gql`
     email: String
     password: String
     profile_pic: String
+    Files:[Files]
+
   }
   type Files {
     _id: ID
