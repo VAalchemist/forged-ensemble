@@ -9,12 +9,12 @@ function Profile() {
   Auth.loggedIn()
   return (
     <>
-   <Nav />
-   <Playlist />
+  <Nav />
+  <Playlist />
 
     <input type="file" placeholder="Upload Image"></input>
 
- </>
+</>
 )
 }
 

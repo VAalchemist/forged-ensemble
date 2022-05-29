@@ -33,25 +33,24 @@ function Nav() {
       </Background>
       <BgImg src={Music}/>
 
-      <nav className="fixed w-full h-[80px] flex justify-between items-center px-4 z-10">
+      <nav className="fixed w-full h-[80px] flex justify-between items-center">
         <div>
           <a href="/">
-          <img src={Logo} alt="Logo Image" style={{ width: "170px" }}/>
+          <img src={Logo} alt="soundboard" className="w-32 md:w-44"/>
           </a>
         </div>
 
-        <div className=" gap-5 hidden md:flex">
+        <div className=" gap-5 hidden md:flex pr-6">
           <NavItem to="/studio">Studio</NavItem>
           <NavItem to="/profile">Profile</NavItem>
           <NavItem to="/contact">Contact</NavItem>
           {/* connect to logout screen */}
-          <LogOut type="submit"  onClick={handleLogout}>
-            Log Out
-          </LogOut>
+          <LogOut type="submit"  onClick={handleLogout} >Log Out</LogOut>
+          
         </div>
 
         {/* hamburger */}
-        <Ham onClick={handleClick} className="md:hidden z-10 ">
+        <Ham onClick={handleClick} className="md:hidden  m-2">
           {!nav ? <FaBars size={25} /> : <FaTimes size={25} />}
         </Ham>
         {/* mobile menu */}

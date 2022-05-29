@@ -5,8 +5,8 @@ export const NavItem = styled(Link)`
 margin: 0 auto;
     object-fit: fill;
     border-radius: 10px;
-    padding: 0.3rem 1rem;
     border: 3px solid #00bdff;
+    padding: 0.3rem 1rem;
     transition: all 0.5s ease;
     /* background: black; */
     color: #fcacf2;
@@ -31,7 +31,6 @@ margin: 0 auto;
     transition: all 0.5s ease;
     color: #fcacf2;
     font-weight: bolder;
-    margin-bottom: 5px;
     &:hover {
         transform: scale(1.1);
         box-shadow: 0 0 1px #ff006e,
@@ -70,8 +69,8 @@ object-fit: fill;
     border: 3px solid #00bdff;
     transition: all 0.5s ease;
     z-index: 50;
- color: #fcacf2;
- :hover {
+color: #fcacf2;
+:hover {
         transform: scale(1.1);
         box-shadow: 0 0 1px #ff006e,
                     0 0 10px #ff006e,

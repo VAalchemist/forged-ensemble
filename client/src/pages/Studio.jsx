@@ -3,14 +3,25 @@ import { Howl, Howler } from 'howler';
 import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
 import record from '../images/record.jpg';
+import Auth from '../utils/auth';
+import Nav from '../pages/Nav';
+import {
+  MdOutlineSave,
+  MdStop,
+  MdPlayArrow,
+  MdFiberManualRecord
+} from 'react-icons/md';
 import {
   Record,
   RecordTxt,
+  Controls,
   SoundBoard,
+  SoundBoardBtns,
   BlueBeatPad,
   PinkBeatPad,
   GreenBeatPad,
-  OrangeBeatPad
+  OrangeBeatPad,
+  
 } from '../components/studio.styles';
 
 import Q from '../drum kit/bewp.wav';
@@ -26,10 +37,6 @@ import X from '../drum kit/shortHH.wav';
 import C from '../drum kit/shortkick.wav';
 import V from '../drum kit/shortshake.wav';
 
-import Auth from '../utils/auth';
-import Nav from '../pages/Nav';
-
-
 
 function Studio() {
   Auth.loggedIn();
@@ -37,7 +44,7 @@ function Studio() {
 
   useEffect(() => {
 
-    function beatpad(event) {
+    function beatPad(event) {
       if (event.defaultPrevented) {
         return; //do nothing if already processed
       }
@@ -89,10 +96,10 @@ function Studio() {
     }
 
 
-    window.addEventListener("keydown", beatpad);
+    window.addEventListener("keydown", beatPad);
     return () => {
       console.log("finished");
-      window.removeEventListener('keydown', beatpad)
+      window.removeEventListener('keydown', beatPad)
     }
   })
 
@@ -137,9 +144,19 @@ return (
         </Background>
 
 
-        <div className='relative flex  items-center'>
+        <div className='relative flex justify-between items-center'>
           <Record src={record} alt="" />
           <RecordTxt>For keyboard<br /> accessibility,<br /> use the<br /> following keys:<br /> Q W E R A S<br /> D F Z X C V</RecordTxt>
+          
+          <SoundBoardBtns>
+
+            <Controls><MdFiberManualRecord size={30} /></Controls>
+            <Controls><MdStop size={30} /></Controls>
+            <Controls><MdPlayArrow size={30} /></Controls>
+            <Controls><MdOutlineSave size={30} /></Controls>
+
+
+          </SoundBoardBtns>
         </div>
 
         <SoundBoard>
