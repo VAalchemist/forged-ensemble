@@ -13,7 +13,7 @@ function Home() {
     <>
     <Demo />
     <Nav />
-    <div className='abosulte h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
+    <div className='absolute h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
       <CgMusic size={15} />
       <CgMusicSpeaker size={40} />
       <Feed>Feed Coming Soon </Feed>
@@ -26,7 +26,7 @@ function Home() {
     <div className='absolute w-[50px] h-12 bg-[#32C8E4] skew-x-[30deg] z-[-1] ml-[35rem] opacity-[45%]'></div> */}
     </div>
   
- 
+
     </>
   );
 }

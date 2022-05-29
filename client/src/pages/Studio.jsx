@@ -44,7 +44,7 @@ function Studio() {
 
   useEffect(() => {
 
-    function beatpad(event) {
+    function beatPad(event) {
       if (event.defaultPrevented) {
         return; //do nothing if already processed
       }
@@ -96,10 +96,10 @@ function Studio() {
     }
 
 
-    window.addEventListener("keydown", beatpad);
+    window.addEventListener("keydown", beatPad);
     return () => {
       console.log("finished");
-      window.removeEventListener('keydown', beatpad)
+      window.removeEventListener('keydown', beatPad)
     }
   })
 
