@@ -2,29 +2,20 @@ import tw from 'tailwind-styled-components';
 
 
 export const Record = tw.img`
-absolute
 w-32
 md:w-40
-md:mb-12
-mb-8
-ml-2
 rounded-full
-hover:animate-spin
-hover:ml-32
-md:hover:ml-32
-hover:duration-1000
 `;
 
 export const RecordTxt = tw.p`
 text-red-500
-text-center
-font-semibold
-md:text-sm
 text-xs
-md:mb-12
-mb-8
-md:ml-6
-ml-8
+md:text-sm
+font-semibold
+ml-16
+md:ml-20
+mt-12
+md:mt-20
 `;
 
 export const Controls = tw.button`

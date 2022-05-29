@@ -144,9 +144,16 @@ return (
         </Background>
 
 
-        <div className='relative flex justify-between items-center'>
-          <Record src={record} alt="" />
-          <RecordTxt>For keyboard<br /> accessibility,<br /> use the<br /> following keys:<br /> Q W E R A S<br /> D F Z X C V</RecordTxt>
+        <div className='flex justify-between items-center'>
+          <div className='w-full h-44 md:mb-12'>
+            <div className='border-4 border-orange-100 border-opacity-0 rounded-full fixed
+hover:animate-spin hover:ml-32 hover:duration-1000 p-8 md:p-12 '>
+              <Record src={record} alt="" />
+            </div>
+  
+            <RecordTxt>For keyboard<br /> accessibility,<br /> use the<br /> following keys:<br /> Q W E R A S<br /> D F Z X C V</RecordTxt>
+          </div>
+          
           
           <SoundBoardBtns>
 
