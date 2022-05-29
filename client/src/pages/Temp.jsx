@@ -68,18 +68,18 @@ function Temp() {
         return (
             <>
                 <Nav />
-                <div className='abosulte h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
+                <div className='absolute h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
                     <form name='img-form' encType='multipart/form-data'onSubmit={handleSubmit}>
 
-                        <input className='text-black' type='text' name='fileName' placeholder='file name'></input>
+                        <input className=' placeholder:text-teal-100 font-semibold rounded bg-stone-700 bg-opacity-80 p-1 mr-4 capitalize' type='text' name='fileName' placeholder='file name'></input>
                         <input type='file' name='file' onChange={handleChange}></input>
 
-                        <button type='submit'>Submit</button>
+                        <button type='submit' className='cursor-pointer placeholder:text-teal-100 font-semibold rounded bg-stone-700 px-2 py-1'>Submit</button>
 
                     </form>
                     </div>
-                    <div className='abosulte h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
-                    <img src={picState} className='w-60'></img>
+                    <div className='absolute h-[25rem] mt-16 text-teal-400 w-full justify-center items-center hidden md:flex'>
+                    <img src={picState} alt="chosen profile pic" className='w-60 capitalize' />
                 </div>
 
             </>
