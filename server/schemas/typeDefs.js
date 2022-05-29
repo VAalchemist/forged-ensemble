@@ -55,12 +55,9 @@ type Query {
     login(email: String!, password: String!): Auth
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addPic(profile_pic: String!,_id: String!): Boolean
-<<<<<<< HEAD
     addBeat(beat: String!, startTime: Int!, userId: String!): Boolean
     removeBeat(_id: String!): Boolean
-=======
     addFile(fileName: String!, url: String!, userId: String!): Boolean
->>>>>>> b14ccbe14831b78f066668dd0275ccec3c2eee6a
   }
 
 `;
