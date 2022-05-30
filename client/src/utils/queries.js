@@ -12,3 +12,16 @@ export const QUERY_USER = gql`
 
   }
 `;
+
+export const QUERY_USER_Files = gql`
+    query getUserFiles($userId: ID!){
+        getUserFiles(userId: $userId){
+            _id
+            fileName
+            url
+            userId
+            artist
+        }
+
+  }
+`;

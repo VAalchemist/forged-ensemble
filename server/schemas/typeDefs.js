@@ -8,12 +8,15 @@ const typeDefs = gql`
     email: String
     password: String
     profile_pic: String
+    Files:[Files]
+
   }
   type Files {
     _id: ID
     fileName: String
     url: String
     userId: String
+    artist: String
   }
 
   type Auth {
@@ -57,7 +60,7 @@ type Query {
     addPic(profile_pic: String!,_id: String!): Boolean
     addBeat(beat: String!, startTime: Int!, userId: String!): Boolean
     removeBeat(_id: String!): Boolean
-    addFile(fileName: String!, url: String!, userId: String!): Boolean
+    addFile(fileName: String!, url: String!, userId: String!, artist: String!): Boolean
   }
 
 `;

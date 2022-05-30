@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Howl, Howler } from 'howler';
 import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
@@ -24,6 +24,9 @@ import {
   
 } from '../components/studio.styles';
 
+import { ADDFILE } from '../utils/mutations';
+import { useMutation, useQuery } from '@apollo/client';
+
 import Q from '../drum kit/bewp.wav';
 import W from '../drum kit/boom.wav';
 import E from '../drum kit/clap.wav';
@@ -40,6 +43,11 @@ import V from '../drum kit/shortshake.wav';
 
 function Studio() {
   Auth.loggedIn();
+  const inputFile = useRef(null) 
+  const [addFile, { error }] = useMutation(ADDFILE);
+  const profile = Auth.getProfile().data;
+  const id = profile._id;
+  const userName = profile.firstName;
 
 
   useEffect(() => {
@@ -98,10 +106,35 @@ function Studio() {
 
     window.addEventListener("keydown", beatPad);
     return () => {
-      console.log("finished");
       window.removeEventListener('keydown', beatPad)
     }
   })
+
+  const  handleUpload= async (event) =>{
+    const file = event.target.files[0];
+    let formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'upload');
+    formData.append('cloud_name', 'duty-call');
+    console.log(formData)
+    const data = await fetch('https://api.cloudinary.com/v1_1/duty-call/video/upload',{
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json());
+
+        try {
+          const mutationResponse = await addFile({
+              variables: { fileName: "my files", url: data.url, userId: id, artist:userName},
+          });
+
+      }
+      catch (e) {
+          console.log(e);
+
+      };
+
+  }
 
 
 const q = (Q);
@@ -116,10 +149,6 @@ const z = (Z);
 const x = (X);
 const c = (C);
 const v = (V);
-
-
-
-
 
 
 
@@ -160,7 +189,10 @@ hover:animate-spin hover:ml-32 hover:duration-1000 p-8 md:p-12 '>
             <Controls><MdFiberManualRecord size={30} /></Controls>
             <Controls><MdStop size={30} /></Controls>
             <Controls><MdPlayArrow size={30} /></Controls>
-            <Controls><MdOutlineSave size={30} /></Controls>
+            <Controls><MdOutlineSave size={30}/></Controls>
+
+            {/* <Controls><MdOutlineSave size={30} onClick={handleClickUpload}/><input type='file' ref={inputFile} style={{display:'none'}} id='upload' onChange={handleUpload} accept='.mp3'></input></Controls> */}
+
 
 
           </SoundBoardBtns>

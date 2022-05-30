@@ -16,6 +16,10 @@ const filesSchema = new Schema({
       userId:{
           type: String,
           required: true
+      },
+      artist: {
+          type: String,
+          required: true
       }
 
 });

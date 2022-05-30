@@ -1,85 +1,83 @@
 import React, { useState, useEffect } from 'react';
 import Nav from '../pages/Nav';
-import { ADDPIC } from '../utils/mutations';
 import Auth from '../utils/auth';
-import { useMutation, useQuery } from '@apollo/client';
-import { QUERY_USER } from '../utils/queries';
+import { useMutation} from '@apollo/client';
+import { ADDFILE } from '../utils/mutations';
+import { useNavigate } from "react-router-dom";
+
 
 
 function Temp() {
     // Auth.loggedIn()
-    const [formState, setFormState] = useState({ fileName: '', file: '' })
-    const [addPic, { error }] = useMutation(ADDPIC);
-    const id = Auth.getProfile().data._id;
-    const { loading, data } = useQuery(QUERY_USER, {variables: {_id: id}});
-    const [picState, setPicState] = useState('');
-
-    useEffect(()=>{
-        if(data){
-            setPicState(data.singleUser.profile_pic)
-
-        }
-    
-    });
 
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        // console.log(formState.fileName);
+    const navigate = useNavigate();
+    const [fileState,setFileState] = useState('');
+    const [fileNameState,setFileNameState] = useState('');
+    const [addFile, { error }] = useMutation(ADDFILE);
 
-        const { fileName, file } = formState
-        // console.log(file);
-
-
-        let formData = new FormData();
-        formData.append('file', file);
-        formData.append('upload_preset', 'upload');
-        formData.append('cloud_name', 'duty-call');
-        console.log(formData)
-
-        const data = await fetch('https://api.cloudinary.com/v1_1/duty-call/image/upload',{
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json());
-        console.log(data);
-        console.log(Auth.getProfile().data._id);
-
-        try {
-            const mutationResponse = await addPic({
-                variables: { profile_pic: data.url, _id: Auth.getProfile().data._id},
-            });
-            
+    const user = Auth.getProfile().data;
+    const id = user._id;
+    const artist = user.firstName;
 
 
-        }
-        catch (e) {
-            console.log(e);
-
-        };
-
-    }
 
         const handleChange = async (event) => {
             const file = event.target.files[0]
-            setFormState({ ...formState, ['file']: file });
+            setFileState(file);
+
         };
+        const handleNameChange = (event) => {
+            const { name, value } = event.target;
+            setFileNameState({...fileNameState, [name]:value})
+
+        }
+
+        const handleFormSubmit = async (event) => {
+            event.preventDefault();
+            let formData = new FormData();
+            console.log(fileState);
+            console.log(fileNameState.fileName);
+            formData.append('file', fileState);
+            formData.append('upload_preset', 'upload');
+            formData.append('cloud_name', 'duty-call');
+            const data = await fetch('https://api.cloudinary.com/v1_1/duty-call/video/upload',{
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json());
+    
+            try {
+              const mutationResponse = await addFile({
+                  variables: { fileName: fileNameState.fileName, url: data.url, userId: id, artist: artist},
+              });
+              navigate("/");
+    
+          }
+          catch (e) {
+              console.log(e);
+          };    
+          
+
+
+
+        }
 
         return (
             <>
                 <Nav />
                 <div className='absolute h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
-                    <form name='img-form' encType='multipart/form-data'onSubmit={handleSubmit}>
+                    <form name='img-form' encType='multipart/form-data' onSubmit={handleFormSubmit}>
 
-                        <input className=' placeholder:text-teal-100 font-semibold rounded bg-stone-700 bg-opacity-80 p-1 mr-4 capitalize' type='text' name='fileName' placeholder='file name'></input>
-                        <input type='file' name='file' onChange={handleChange}></input>
+                        <input className='text-black' type='text' name='fileName' placeholder='file name' onChange={handleNameChange}></input>
+                        <input type='file' name='file' onChange={handleChange} accept='.mp3'></input>
 
-                        <button type='submit' className='cursor-pointer placeholder:text-teal-100 font-semibold rounded bg-stone-700 px-2 py-1'>Submit</button>
+                        <button type='submit'>Submit</button>
 
                     </form>
                     </div>
-                    <div className='absolute h-[25rem] mt-16 text-teal-400 w-full justify-center items-center hidden md:flex'>
-                    <img src={picState} alt="chosen profile pic" className='w-60 capitalize' />
+                    <div className='absolute h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
+  
                 </div>
 
             </>
