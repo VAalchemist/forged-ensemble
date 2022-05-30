@@ -26,6 +26,7 @@
         "graphql": "^16.5.0",
         "jsonwebtoken": "^8.5.1",
         "path-browserify": "^1.0.1",
+        "react-audio-player": "^0.17.0",
         "react-dropzone": "^14.2.1",
         "stripe": "^9.2.0",
         "url": "^0.11.0"
