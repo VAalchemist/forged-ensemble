@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { song_list } from '../recorded/songs'
 import { FiShare } from 'react-icons/fi'
 import { BsPlay, BsPauseFill } from 'react-icons/bs'
-import { Howl } from 'howler'
+import { Howl, Howler } from 'howler';
 import song from '../drum kit/song1.mp3'
+import ReactAudioPlayer from 'react-audio-player';
+
 import {
     EmailShareButton,
     FacebookShareButton,
@@ -19,42 +21,35 @@ import {
 import { QUERY_USER_Files } from '../utils/queries';
 import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
+import { SoundBoard } from "../components/studio.styles";
 
-const useAudio = () => {
-    const [audio] = useState(new Audio());
-    const [playing, setPlaying] = useState(false);
+// const useAudio = () => {
+//     const [audio] = useState(new Audio());
+//     const [playing, setPlaying] = useState(false);
 
-    const toggle = () => setPlaying(!playing);
+//     const toggle = () => setPlaying(!playing);
 
-    useEffect(() => {
-        playing ? audio.play() : audio.pause();
-    },
-        [playing]
-    );
+//     useEffect(() => {
+//         playing ? audio.play() : audio.pause();
+//     },
+//         [playing]
+//     );
 
-    useEffect(() => {
-        audio.addEventListener('ended', () => setPlaying(false));
-        return () => {
-            audio.removeEventListener('ended', () => setPlaying(false));
-        };
-    }, []);
+//     useEffect(() => {
+//         audio.addEventListener('ended', () => setPlaying(false));
+//         return () => {
+//             audio.removeEventListener('ended', () => setPlaying(false));
+//         };
+//     }, []);
 
-    return [playing, toggle];
-};
+//     return [playing, toggle];
+// };
 
 
 
 function Playlist() {
-    
-    
-    const toggle = (e) => {
-        e.preventDefault();
-        console.log(e.target.getAttribute('name'));
-        // useAudio(e.target.getAttribute('name'));
-    }
 
-    const [playing] = useAudio();
-    ;
+
 
     
     const [share, setShare] = useState(false);
@@ -80,7 +75,6 @@ function Playlist() {
                         {files.getUserFiles.map((file, index) => (
                             <div key={index} className="flex justify-center">
 
-                                 <p>{file.url}</p>
 
                                 <div className="border-2 w-[75%] border-white flex m-7 rounded-xl justify-between items-center">
                                     <div className="ml-4 mt-1 mb-1">
@@ -91,8 +85,7 @@ function Playlist() {
                                     </div>
                                     <div className="flex flex-row justify-between max-w-sm mr-4">
                                         <div className="mr-2">
-                                            <button className="border-2 border-white rounded-md p-[1px]" onClick={toggle}>{playing ? <BsPauseFill name={file.url} size={25} /> : <BsPlay name={file.url} size={25} />}
-                                            </button>
+                                            <ReactAudioPlayer src={file.url} controls/>
                                         </div>
                                         <div className="mt-[.5px] border-2 border-white rounded-md p-[3px]">
                                             <button onClick={handleClick}><FiShare size={20} />
