@@ -12,7 +12,6 @@ function Profile() {
    <Nav />
    <Playlist />
 
-    <input type="file" placeholder="Upload Image"></input>
 
  </>
 )

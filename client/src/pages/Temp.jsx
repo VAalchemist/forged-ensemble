@@ -71,15 +71,15 @@ function Temp() {
                 <div className='abosulte h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
                     <form name='img-form' encType='multipart/form-data'onSubmit={handleSubmit}>
 
-                        <input className='text-black' type='text' name='fileName' placeholder='file name'></input>
-                        <input type='file' name='file' onChange={handleChange}></input>
+                        {/* <input className='text-black' type='text' name='fileName' placeholder='file name'></input> */}
+                        <input className="" type='file' name='file' onChange={handleChange}></input>
 
                         <button type='submit'>Submit</button>
 
                     </form>
                     </div>
                     <div className='abosulte h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
-                    <img src={picState} className='w-60'></img>
+                    <img src={picState} className="w-[65px] rounded-full border-2 border-pink-300"></img>
                 </div>
 
             </>
