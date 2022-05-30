@@ -67,6 +67,8 @@ export const BlueBeatPad = tw(BeatPad)`
 bg-[#00dfff]
 hover:ring-cyan-600
 hover:bg-[#9ae7f2]
+active:bg-[#9ae7f2]
+active:ring-pink-600
 `;
 
 export const OrangeBeatPad = tw(BeatPad)`

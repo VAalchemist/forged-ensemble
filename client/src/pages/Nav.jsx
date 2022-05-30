@@ -58,10 +58,6 @@ function Nav() {
         <ul
           className={
             nav ? 'fixed right-0 top-0 w-[100%] h-screen bg-black flex flex-col justify-center items-center  ease-in-out duration-1000 opacity-[90%] md:hidden' : 'ease-in-out duration-1000 fixed right-[-100%] top-0 w-[100%] h-screen bg-black flex flex-col justify-center items-center opacity-[0]'
-
-            // !nav
-            //   ? "hidden"
-            //   : "absolute top-0 left-0 w-full h-screen  bg-black flex flex-col justify-center items-center opacity-[85%] md:hidden transition duration-300 ease-linear"
               
           }
         >
