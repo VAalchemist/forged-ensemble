@@ -16,7 +16,7 @@ function Cards() {
         <p className='mb-10 font-bold'>Edd-Arlo Garcia</p>
             <a href="https://github.com/Eddielo26" target="_blank"
           rel="noreferrer"> 
-            <img src={Arlo}/>
+            <img src={Arlo} alt="avatar img"/>
             </a>
           </div>
           
@@ -25,10 +25,10 @@ function Cards() {
         <div className="w-48 h-[325px] flex justify-between items-center mt-[120px] hover:mt-[-300px] duration-500 bg-[#9ae7f2] px-1 rounded-t-[50px] items center">
         
           <div className="text-center justify-between w-full mb-10">
-           <p className='mb-10 font-bold'>Justyn Subrai</p>
+          <p className='mb-10 font-bold'>Justyn Subrai</p>
             <a href="https://github.com/JustynSubrai" target="_blank"
           rel="noreferrer"> 
-            <img src={Justyn}/>
+            <img src={Justyn} alt="avatar img"/>
             </a>
           </div>
           
@@ -40,7 +40,7 @@ function Cards() {
         <p className='mb-10 font-bold'>Kevin Castillo</p>
             <a className=""href="https://github.com/kcastil7" target="_blank"
           rel="noreferrer"> 
-            <img src={Kevin}/>
+            <img src={Kevin} alt="avatar img"/>
             </a>
           </div>
           
@@ -52,7 +52,7 @@ function Cards() {
         <p className='mb-10 font-bold'>Charlene Kim</p>
             <a className=""href="https://github.com/VAalchemist" target="_blank"
           rel="noreferrer"> 
-            <img src={Char}/>
+            <img src={Char} alt="avatar img"/>
             </a>
           </div>
           

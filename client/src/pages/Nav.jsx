@@ -83,7 +83,7 @@ function Nav() {
           </div>
         </div>
 
-        <div className=" gap-5 hidden md:flex">
+        <div className=" gap-5 hidden md:flex pr-6">
           <NavItem to="/studio">Studio</NavItem>
           <NavItem to="/profile">Profile</NavItem>
           <NavItem to="/contact">Contact</NavItem>
@@ -94,7 +94,7 @@ function Nav() {
         </div>
 
         {/* hamburger */}
-        <Ham onClick={handleClick} className="md:hidden z-10 ">
+        <Ham onClick={handleClick} className="md:hidden  m-2">
           {!nav ? <FaBars size={25} /> : <FaTimes size={25} />}
         </Ham>
         {/* mobile menu */}

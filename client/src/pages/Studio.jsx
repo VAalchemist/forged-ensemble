@@ -1,16 +1,31 @@
+import React, { useEffect, useRef } from 'react';
 import { Howl, Howler } from 'howler';
 import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
 import record from '../images/record.jpg';
+import Auth from '../utils/auth';
+import Nav from '../pages/Nav';
+import {
+  MdOutlineSave,
+  MdStop,
+  MdPlayArrow,
+  MdFiberManualRecord
+} from 'react-icons/md';
 import {
   Record,
   RecordTxt,
+  Controls,
   SoundBoard,
+  SoundBoardBtns,
   BlueBeatPad,
   PinkBeatPad,
   GreenBeatPad,
-  OrangeBeatPad
+  OrangeBeatPad,
+  
 } from '../components/studio.styles';
+
+import { ADDFILE } from '../utils/mutations';
+import { useMutation, useQuery } from '@apollo/client';
 
 import Q from '../drum kit/bewp.wav';
 import W from '../drum kit/boom.wav';
@@ -25,108 +40,157 @@ import X from '../drum kit/shortHH.wav';
 import C from '../drum kit/shortkick.wav';
 import V from '../drum kit/shortshake.wav';
 
-import Auth from '../utils/auth';
-import Nav from '../pages/Nav';
-
-
 
 function Studio() {
-  Auth.loggedIn()
-
-  const q = (Q);
-  const w = (W);
-  const e = (E);
-  const r = (R);
-  const a = (A);
-  const s = (S);
-  const d = (D);
-  const f = (F);
-  const z = (Z);
-  const x = (X);
-  const c = (C);
-  const v = (V);
+  Auth.loggedIn();
+  const inputFile = useRef(null) 
+  const [addFile, { error }] = useMutation(ADDFILE);
+  const profile = Auth.getProfile().data;
+  const id = profile._id;
+  const userName = profile.firstName;
 
 
-  window.addEventListener("keydown", function (event) {
-    if (event.defaultPrevented) {
-      return; //do nothing if already processed
+  useEffect(() => {
+
+    function beatPad(event) {
+      if (event.defaultPrevented) {
+        return; //do nothing if already processed
+      }
+
+      console.log(event.key.toLowerCase());
+
+      switch (event.key.toLowerCase()) {
+        case "q":
+          Beats(q);
+          break;
+        case "w":
+          Beats(w);
+          break;
+        case "e":
+          Beats(e);
+          break;
+        case "r":
+          Beats(r);
+          break;
+        case "a":
+          Beats(a);
+          break;
+        case "s":
+          Beats(s);
+          break;
+        case "d":
+          Beats(d);
+          break;
+        case "f":
+          Beats(f);
+          break;
+        case "z":
+          Beats(z);
+          break;
+        case "x":
+          Beats(x);
+          break;
+        case "c":
+          Beats(c);
+          break;
+        case "v":
+          Beats(v);
+          break;
+        default:
+          return;
+      }
+
+      event.preventDefault();
     }
 
-    console.log(event.key);
 
-    switch (event.key) {
-      case "q":
-        Beats(q);
-        break;
-      case "w":
-        Beats(w);
-        break;
-      case "e":
-        Beats(e);
-        break;
-      case "r":
-        Beats(r);
-        break;
-      case "a":
-        Beats(a);
-        break;
-      case "s":
-        Beats(s);
-        break;
-      case "d":
-        Beats(d);
-        break;
-      case "f":
-        Beats(f);
-        break;
-      case "z":
-        Beats(z);
-        break;
-      case "x":
-        Beats(x);
-        break;
-      case "c":
-        Beats(c);
-        break;
-      case "v":
-        Beats(v);
-        break;
-    default:
-      return;
+    window.addEventListener("keydown", beatPad);
+    return () => {
+      window.removeEventListener('keydown', beatPad)
+    }
+  })
+
+  const  handleUpload= async (event) =>{
+    const file = event.target.files[0];
+    let formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'upload');
+    formData.append('cloud_name', 'duty-call');
+    console.log(formData)
+    const data = await fetch('https://api.cloudinary.com/v1_1/duty-call/video/upload',{
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json());
+
+        try {
+          const mutationResponse = await addFile({
+              variables: { fileName: "my files", url: data.url, userId: id, artist:userName},
+          });
+
+      }
+      catch (e) {
+          console.log(e);
+
+      };
+
   }
 
-  event.preventDefault();
-  }, true);
+
+const q = (Q);
+const w = (W);
+const e = (E);
+const r = (R);
+const a = (A);
+const s = (S);
+const d = (D);
+const f = (F);
+const z = (Z);
+const x = (X);
+const c = (C);
+const v = (V);
 
 
 
 
+const Beats = (src) => {
+  const sound = new Howl({
+    src,
+    html5: true,
+  });
+  sound.play();
+};
 
-  const Beats = (src) => {
-    const sound = new Howl({
-      src,
-      html5: true,
-    });
-    sound.play();
-  };
+Howler.volume(0.5);
 
-  Howler.volume(0.5);
-
-  return (
-    <>
-    <Nav/>
+return (
+  <>
+    <Nav />
     <div className='flex justify-center items-center w-full h-screen '>
       <div >
         <Background autoPlay loop muted  >
           <source src={music} type="video/mp4" />
         </Background>
-        
 
-        <div className='relative flex  items-center'>
+
+        <div className='relative flex justify-between items-center'>
           <Record src={record} alt="" />
-          <RecordTxt>For keyboard<br/> accessibility,<br/> use the<br/> following keys:<br/> Q W E R A S<br/> D F Z X C V</RecordTxt>
+          <RecordTxt>For keyboard<br /> accessibility,<br /> use the<br /> following keys:<br /> Q W E R A S<br /> D F Z X C V</RecordTxt>
+          
+          <SoundBoardBtns>
+
+            <Controls><MdFiberManualRecord size={30} /></Controls>
+            <Controls><MdStop size={30} /></Controls>
+            <Controls><MdPlayArrow size={30} /></Controls>
+            <Controls><MdOutlineSave size={30}/></Controls>
+
+            {/* <Controls><MdOutlineSave size={30} onClick={handleClickUpload}/><input type='file' ref={inputFile} style={{display:'none'}} id='upload' onChange={handleUpload} accept='.mp3'></input></Controls> */}
+
+
+
+          </SoundBoardBtns>
         </div>
-        
+
         <SoundBoard>
           <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'></BlueBeatPad>
           <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'></OrangeBeatPad>
@@ -141,12 +205,12 @@ function Studio() {
           <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'></PinkBeatPad>
           <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'></GreenBeatPad>
         </SoundBoard>
-      
 
-        </div>
+
       </div>
-    </>
-  )
+    </div>
+  </>
+)
 }
 
 export default Studio;

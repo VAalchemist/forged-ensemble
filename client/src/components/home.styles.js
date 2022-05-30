@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const Feed = styled.h1`
-    font-size: 300%;
+    font-size: 175%;
     line-height: 118%;
     color: transparent;
   
@@ -17,17 +17,15 @@ export const Feed = styled.h1`
     100% {
       background-position: 2000px 0;
     }
-  }
 
-  @media (max-width: 820px) {
+    @media (max-width: 768px) {
   font-size: 250%;
   }
 
-  @media (max-width: 550px) {
-  font-size: 155%;
+  @media (max-width: 1024px) {
+  font-size: 300%;
   }
 
-  @media (max-width: 390px) {
-  font-size: 130%;
   }
+
 ` 

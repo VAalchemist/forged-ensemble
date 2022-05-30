@@ -9,11 +9,10 @@ function Profile() {
   Auth.loggedIn()
   return (
     <>
-   <Nav />
-   <Playlist />
+  <Nav />
+  <Playlist />
 
-
- </>
+</>
 )
 }
 
