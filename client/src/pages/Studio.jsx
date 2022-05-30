@@ -1,17 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Howl, Howler } from 'howler';
 import music from "../images/home.mp4";
 import { Background } from "../components/login.styles";
 import record from '../images/record.jpg';
+import Auth from '../utils/auth';
+import Nav from '../pages/Nav';
+import {
+  MdOutlineSave,
+  MdStop,
+  MdPlayArrow,
+  MdFiberManualRecord
+} from 'react-icons/md';
 import {
   Record,
   RecordTxt,
+  Controls,
   SoundBoard,
+  SoundBoardBtns,
   BlueBeatPad,
   PinkBeatPad,
   GreenBeatPad,
-  OrangeBeatPad
+  OrangeBeatPad,
+  
 } from '../components/studio.styles';
+
+import { ADDFILE } from '../utils/mutations';
+import { useMutation, useQuery } from '@apollo/client';
 
 import Q from '../drum kit/bewp.wav';
 import W from '../drum kit/boom.wav';
@@ -26,18 +40,19 @@ import X from '../drum kit/shortHH.wav';
 import C from '../drum kit/shortkick.wav';
 import V from '../drum kit/shortshake.wav';
 
-import Auth from '../utils/auth';
-import Nav from '../pages/Nav';
-
-
 
 function Studio() {
   Auth.loggedIn();
+  const inputFile = useRef(null) 
+  const [addFile, { error }] = useMutation(ADDFILE);
+  const profile = Auth.getProfile().data;
+  const id = profile._id;
+  const userName = profile.firstName;
 
 
   useEffect(() => {
 
-    function beatpad(event) {
+    function beatPad(event) {
       if (event.defaultPrevented) {
         return; //do nothing if already processed
       }
@@ -89,12 +104,37 @@ function Studio() {
     }
 
 
-    window.addEventListener("keydown", beatpad);
+    window.addEventListener("keydown", beatPad);
     return () => {
-      console.log("finished");
-      window.removeEventListener('keydown', beatpad)
+      window.removeEventListener('keydown', beatPad)
     }
   })
+
+  const  handleUpload= async (event) =>{
+    const file = event.target.files[0];
+    let formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'upload');
+    formData.append('cloud_name', 'duty-call');
+    console.log(formData)
+    const data = await fetch('https://api.cloudinary.com/v1_1/duty-call/video/upload',{
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json());
+
+        try {
+          const mutationResponse = await addFile({
+              variables: { fileName: "my files", url: data.url, userId: id, artist:userName},
+          });
+
+      }
+      catch (e) {
+          console.log(e);
+
+      };
+
+  }
 
 
 const q = (Q);
@@ -109,10 +149,6 @@ const z = (Z);
 const x = (X);
 const c = (C);
 const v = (V);
-
-
-
-
 
 
 
@@ -137,9 +173,22 @@ return (
         </Background>
 
 
-        <div className='relative flex  items-center'>
+        <div className='relative flex justify-between items-center'>
           <Record src={record} alt="" />
           <RecordTxt>For keyboard<br /> accessibility,<br /> use the<br /> following keys:<br /> Q W E R A S<br /> D F Z X C V</RecordTxt>
+          
+          <SoundBoardBtns>
+
+            <Controls><MdFiberManualRecord size={30} /></Controls>
+            <Controls><MdStop size={30} /></Controls>
+            <Controls><MdPlayArrow size={30} /></Controls>
+            <Controls><MdOutlineSave size={30}/></Controls>
+
+            {/* <Controls><MdOutlineSave size={30} onClick={handleClickUpload}/><input type='file' ref={inputFile} style={{display:'none'}} id='upload' onChange={handleUpload} accept='.mp3'></input></Controls> */}
+
+
+
+          </SoundBoardBtns>
         </div>
 
         <SoundBoard>

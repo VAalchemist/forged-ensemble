@@ -7,5 +7,5 @@ export const song_list = [
         fileUrl: {song},
     },
 
-   
+
 ]

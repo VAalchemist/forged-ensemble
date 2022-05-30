@@ -28,7 +28,7 @@ const userSchema = new Schema({
     profile_pic: {
       type: String
     }  ,
-    File: [{
+    Files: [{
       type: Schema.Types.ObjectId,
       ref: "Files"
     }]

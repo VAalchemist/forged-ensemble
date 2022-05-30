@@ -39,3 +39,10 @@ export const ADDPIC = gql`
     addPic(profile_pic: $profile_pic, _id: $_id) 
   }
 `;
+
+export const ADDFILE = gql`
+  mutation addFile($fileName: String!, $url: String!, $userId: String!, $artist: String!) {
+    addFile(fileName: $fileName, url: $url, userId: $userId, artist: $artist) 
+  }
+`;
+

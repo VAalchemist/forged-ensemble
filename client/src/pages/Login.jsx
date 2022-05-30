@@ -55,9 +55,9 @@ function Login(props) {
                 <div className='border-2 w-20 border-[#ff006e] inline-block mb-2'></div>
                 {/* Social Login */}
                 <div className='flex justify-center my-2'>
-                  <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaFacebookF className='text-sm' /></a>
-                  <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaTwitter className='text-sm' /></a>
-                  <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaGoogle className='text-sm' /></a>
+                  <a href='/' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaFacebookF className='text-sm' /></a>
+                  <a href='/' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaTwitter className='text-sm' /></a>
+                  <a href='/' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaGoogle className='text-sm' /></a>
                 </div>
 
                 <p className='text-white my-3'>or login with email</p>
@@ -76,7 +76,7 @@ function Login(props) {
                     <div className='flex justify-between w-64 mb-5'>
                       <label className='flex items-center text-xs'><input type='checkbox' name='remember' className='mr-2' ></input>Remember Me</label>
 
-                      <a href='#' className='text-xs'>Forgot Password?</a>
+                      <a href='/' className='text-xs'>Forgot Password?</a>
                     </div>
                   </div>
                   {/* Sign-In */}
@@ -112,9 +112,9 @@ function Login(props) {
               <div className='border-2 w-20 border-[#ff006e] inline-block mb-2'></div>
               {/* Social Login */}
               <div className='flex justify-center my-2'>
-                <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaFacebookF className='text-sm' /></a>
-                <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaTwitter className='text-sm' /></a>
-                <a href='#' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaGoogle className='text-sm' /></a>
+                <a href='/' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaFacebookF className='text-sm' /></a>
+                <a href='/' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaTwitter className='text-sm' /></a>
+                <a href='/' className='border-2 border-[#ff006e] rounded-full p-3 mx-1'><FaGoogle className='text-sm' /></a>
               </div>
 
               <p className='text-white my-3'>or login with email</p>
@@ -131,7 +131,7 @@ function Login(props) {
                   <div className='flex justify-between w-64 mb-5'>
                     <label className='flex items-center text-xs'><input type='checkbox' name='remember' className='mr-2'></input>Remember Me</label>
 
-                    <a href='#' className='text-xs'>Forgot Password?</a>
+                    <a href='/' className='text-xs'>Forgot Password?</a>
                   </div>
                   <div className='flex p-5'>
                     {error ? (
