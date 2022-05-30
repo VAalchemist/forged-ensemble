@@ -26,7 +26,6 @@ const resolvers = {
     },
 
     getUserFiles: async (parent, args) => {
-      console.log(args.userId);
       return Files.find({ userId: args.userId })
     }
   },

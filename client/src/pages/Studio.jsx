@@ -45,7 +45,9 @@ function Studio() {
   Auth.loggedIn();
   const inputFile = useRef(null) 
   const [addFile, { error }] = useMutation(ADDFILE);
-  const id = Auth.getProfile().data._id;
+  const profile = Auth.getProfile().data;
+  const id = profile._id;
+  const userName = profile.firstName;
 
 
   useEffect(() => {
@@ -108,14 +110,7 @@ function Studio() {
     }
   })
 
-  const  handleClickUpload= () =>{
-    console.log('upload pressed');
-    inputFile.current.click();
-
-  }
-
   const  handleUpload= async (event) =>{
-    console.log('uploaded the image');
     const file = event.target.files[0];
     let formData = new FormData();
     formData.append('file', file);
@@ -127,11 +122,10 @@ function Studio() {
             body: formData
         })
         .then(response => response.json());
-        console.log(data);
 
         try {
           const mutationResponse = await addFile({
-              variables: { fileName: "my files", url: data.url, userId: Auth.getProfile().data._id},
+              variables: { fileName: "my files", url: data.url, userId: id, artist:userName},
           });
 
       }
@@ -188,8 +182,9 @@ return (
             <Controls><MdFiberManualRecord size={30} /></Controls>
             <Controls><MdStop size={30} /></Controls>
             <Controls><MdPlayArrow size={30} /></Controls>
+            <Controls><MdOutlineSave size={30}/></Controls>
 
-            <Controls><MdOutlineSave size={30} onClick={handleClickUpload}/><input type='file' ref={inputFile} style={{display:'none'}} id='upload' onChange={handleUpload} accept='.mp3'></input></Controls>
+            {/* <Controls><MdOutlineSave size={30} onClick={handleClickUpload}/><input type='file' ref={inputFile} style={{display:'none'}} id='upload' onChange={handleUpload} accept='.mp3'></input></Controls> */}
 
 
 
