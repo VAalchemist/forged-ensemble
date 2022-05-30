@@ -1,5 +1,5 @@
 const db = require('../config/connection');
-const { User } = require('../models');
+const { User, Files } = require('../models');
 
 db.once('open', async () => {
   await User.deleteMany({});
@@ -38,6 +38,8 @@ db.once('open', async () => {
     password: 'Welcome123'
 
   });
+
+
 
   console.log('users seeded');
 
