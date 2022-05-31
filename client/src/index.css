@@ -3,3 +3,51 @@
 @tailwind utilities;
 
 
+.audio_player {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+.spinner {
+    display: none;
+    
+}
+
+.audio_info {
+    display: none;
+}
+
+#play {
+    fill:white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reload-icon {
+    display: none;
+}
+
+.play_pause_inner {
+display: flex;
+   flex-direction: row;
+   padding-right: 10px;
+   /* background-color: red; */
+   gap: 10px;
+}
+
+#Group {
+    fill: white;
+}
+
+i svg  {
+    height: 25px; 
+    width: 25px;
+    fill: white;
+    padding-bottom: 5px;
+    
+}
+
+svg g {
+    fill : white;
+}

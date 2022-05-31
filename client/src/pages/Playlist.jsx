@@ -4,7 +4,11 @@ import { FiShare } from 'react-icons/fi'
 import { BsPlay, BsPauseFill } from 'react-icons/bs'
 import { Howl, Howler } from 'howler';
 import song from '../drum kit/song1.mp3'
-import ReactAudioPlayer from 'react-audio-player';
+// import AudioPlayer from 'react-audio-player';
+import AudioPlayer from 'react-custom-audio-player';
+
+
+
 
 import {
     EmailShareButton,
@@ -85,7 +89,7 @@ function Playlist() {
                                     </div>
                                     <div className="flex flex-row justify-between max-w-sm mr-4">
                                         <div className="mr-2">
-                                            <ReactAudioPlayer src={file.url} controls/>
+                                            <AudioPlayer className=''src={file.url}/>
                                         </div>
                                         <div className="mt-[.5px] border-2 border-white rounded-md p-[3px]">
                                             <button onClick={handleClick}><FiShare size={20} />
