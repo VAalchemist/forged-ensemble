@@ -17,14 +17,14 @@ export const Feed = styled.h1`
     100% {
       background-position: 2000px 0;
     }
-
-    @media (max-width: 768px) {
+/* 
+  @media (max-width: 768px) {
   font-size: 250%;
   }
 
   @media (max-width: 1024px) {
   font-size: 300%;
-  }
+  } */
 
   }
 

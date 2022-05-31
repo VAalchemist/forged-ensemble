@@ -8,7 +8,6 @@ import Char from "../images/Charlene.png";
 function Cards() {
   return (
     <>
-      {/* <div className="max-w-xs overflow-hidden shadow-lg rounded-t-[150px]"> */}
       <div className="hidden lg:flex fixed bottom-[-10%] h-32 w-screen items-center justify-center opacity-[65%]">
         <div className="w-48 h-[325px] flex justify-between items-center mt-[120px] hover:mt-[-300px] duration-500 bg-[#ff8f00] px-1 rounded-t-[50px] items center">
         
