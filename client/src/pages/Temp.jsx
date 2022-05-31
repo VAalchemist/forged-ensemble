@@ -4,6 +4,8 @@ import Auth from '../utils/auth';
 import { useMutation} from '@apollo/client';
 import { ADDFILE } from '../utils/mutations';
 import { useNavigate } from "react-router-dom";
+import { LogOut } from "../components/nav.styles";
+import { Input } from "../components/contact.styles";
 
 
 
@@ -67,12 +69,13 @@ function Temp() {
             <>
                 <Nav />
                 <div className='absolute h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
+                {/* here */}
                     <form name='img-form' encType='multipart/form-data' onSubmit={handleFormSubmit}>
 
-                        <input className='text-black' type='text' name='fileName' placeholder='file name' onChange={handleNameChange}></input>
-                        <input type='file' name='file' onChange={handleChange} accept='.mp3'></input>
+                        <input className='flex flex-col max-w-[600px] w-full z-[1] placeholder-white p-4 rounded-[10px] bg-[#290185] text-white opacity-[85%] mb-4' type='text' name='fileName' placeholder='file name' onChange={handleNameChange}></input>
+                        <input className="placeholder-white p-4 rounded-[10px] bg-[#290185] text-white opacity-[85%] flex justify-center mb-4" type='file' name='file' onChange={handleChange} accept='.mp3'></input>
 
-                        <button type='submit'>Submit</button>
+                        <LogOut class="flex"type='submit'>Submit</LogOut>
 
                     </form>
                     </div>
