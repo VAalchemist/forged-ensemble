@@ -179,13 +179,15 @@ const v = (V);
     console.log(' play recording...')
   }
 
-  const storeBeat = length => Array.from(
-  { length },
-  // Mapper function: i is the current index in the length being iterated over:
-    (_, i) => i + 1
-  ); 
-
   
+
+  function storeBeat() {
+    var results = [];
+    for (var i = 0; i < arguments.length; i++) {
+        results.push(arguments[i]);
+    }
+    return results;
+}
   
   const spawnSongArr =() => {
 
