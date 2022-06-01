@@ -8,6 +8,7 @@ import { Background, BgImg, Zoom } from '../components/login.styles'
 import loginimg from '../images/loginImg.png'
 import { FaFacebookF, FaGoogle, FaTwitter, FaRegEnvelope } from 'react-icons/fa'
 import { MdLockOutline } from 'react-icons/md'
+import '../index.css';
 
 
 function Login(props) {

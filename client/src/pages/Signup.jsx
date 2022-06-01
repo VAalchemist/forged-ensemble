@@ -8,10 +8,11 @@ import { Link } from 'react-router-dom'
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
+import '../index.css';
 
 function Signup() {
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [addUser, { error }, data] = useMutation(ADD_USER,{ errorPolicy: 'all' });
+  const [addUser, { error }] = useMutation(ADD_USER,{ errorPolicy: 'all' });
 
 
   const handleFormSubmit = async (event) => {

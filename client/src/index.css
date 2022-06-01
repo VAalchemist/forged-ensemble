@@ -51,3 +51,7 @@ i svg  {
 svg g {
     fill : white;
 }
+
+input {
+    color: black;
+}
