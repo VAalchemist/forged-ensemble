@@ -43,14 +43,39 @@ import V from '../drum kit/shortshake.wav';
 
 function Studio() {
   Auth.loggedIn();
+
   const inputFile = useRef(null) 
   const [addFile, { error }] = useMutation(ADDFILE);
   const profile = Auth.getProfile().data;
   const id = profile._id;
   const userName = profile.firstName;
 
+  
+  const  handleUpload= async (event) => {
+    const file = event.target.files[0];
+    let formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'upload');
+    formData.append('cloud_name', 'duty-call');
+    console.log(formData)
+    const data = await fetch('https://api.cloudinary.com/v1_1/duty-call/video/upload',{
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json());
 
-  useEffect(() => {
+        try {
+          const mutationResponse = await addFile({
+            variables: { fileName: "my files", url: data.url, userId: id, artist: userName },
+          });
+        }
+      catch (e) {
+      console.log(e);
+    };
+  }
+
+
+useEffect(() => {
 
     function beatPad(event) {
       if (event.defaultPrevented) {
@@ -106,36 +131,9 @@ function Studio() {
 
     window.addEventListener("keydown", beatPad);
     return () => {
-      window.removeEventListener('keydown', beatPad)
+      window.removeEventListener("keydown", beatPad)
     }
-  })
-
-  const  handleUpload= async (event) =>{
-    const file = event.target.files[0];
-    let formData = new FormData();
-    formData.append('file', file);
-    formData.append('upload_preset', 'upload');
-    formData.append('cloud_name', 'duty-call');
-    console.log(formData)
-    const data = await fetch('https://api.cloudinary.com/v1_1/duty-call/video/upload',{
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json());
-
-        try {
-          const mutationResponse = await addFile({
-              variables: { fileName: "my files", url: data.url, userId: id, artist:userName},
-          });
-
-      }
-      catch (e) {
-          console.log(e);
-
-      };
-
-  }
-
+  });
 
 const q = (Q);
 const w = (W);
@@ -151,7 +149,15 @@ const c = (C);
 const v = (V);
 
 
+  const storeBeat = () => {
+  //store the beat in an array
+    
+    //DOM manipulation
+  }
+  
+  const spawnSongArr =() => {
 
+  }
 
 const Beats = (src) => {
   const sound = new Howl({
@@ -159,6 +165,7 @@ const Beats = (src) => {
     html5: true,
   });
   sound.play();
+  storeBeat();
 };
 
 Howler.volume(0.5);
@@ -173,20 +180,27 @@ return (
         </Background>
 
 
-        <div className='relative flex justify-between items-center'>
-          <Record src={record} alt="" />
-          <RecordTxt>For keyboard<br /> accessibility,<br /> use the<br /> following keys:<br /> Q W E R A S<br /> D F Z X C V</RecordTxt>
+        <div className='flex justify-between items-center'>
+          <div className='w-full h-44 md:mb-12'>
+            <div className='border-4 border-orange-100 border-opacity-0 rounded-full fixed
+hover:animate-spin hover:ml-32 hover:duration-1000 p-8 md:p-12 '>
+              <Record src={record} alt="" />
+            </div>
+  
+            <RecordTxt>For keyboard<br /> accessibility,<br /> use the<br /> following keys:<br /> Q W E R A S<br /> D F Z X C V</RecordTxt>
+          </div>
+          
+          <div>{spawnSongArr}</div>
           
           <SoundBoardBtns>
 
             <Controls><MdFiberManualRecord size={30} /></Controls>
             <Controls><MdStop size={30} /></Controls>
             <Controls><MdPlayArrow size={30} /></Controls>
+            <a href ='./temp'>
             <Controls><MdOutlineSave size={30}/></Controls>
-
+            </a>
             {/* <Controls><MdOutlineSave size={30} onClick={handleClickUpload}/><input type='file' ref={inputFile} style={{display:'none'}} id='upload' onChange={handleUpload} accept='.mp3'></input></Controls> */}
-
-
 
           </SoundBoardBtns>
         </div>

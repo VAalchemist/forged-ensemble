@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FiShare } from 'react-icons/fi'
-import { BsPlay, BsPauseFill, BsMusicNote } from 'react-icons/bs'
-import { Howl, Howler } from 'howler'
+// import AudioPlayer from 'react-audio-player';
+import AudioPlayer from 'react-custom-audio-player';
+
+
+
+
 import {
     EmailShareButton,
     FacebookShareButton,
@@ -25,48 +29,6 @@ import { useQuery } from '@apollo/client';
 
 
 function Playlist() {
-
-    const useAudio = () => {
-        const [audio] = useState(new Audio());
-        const [playing, setPlaying] = useState(false);
-        
-        const toggle = () => setPlaying(!playing);
-        
-        useEffect(() => {
-            playing ? audio.play() : audio.pause();
-        },
-        [playing]
-        );
-        
-        useEffect(() => {
-            audio.addEventListener('ended', () => setPlaying(false));
-            return () => {
-                audio.removeEventListener('ended', () => setPlaying(false));
-            };
-        }, []);
-        
-        return [playing, toggle];
-    };
-
-    const [playing, toggle] = useAudio();
-    
-    // const [playing, setPlaying] = useState(false);
-    
-
-    // const Beats = (src) => {
-    //     const sound = new Howl({
-    //         src,
-    //         html5: true,
-    //     });
-
-    //     if (playing) {
-    //         sound.pause();
-    //     } else {
-    //         sound.play();
-    //         setPlaying(true);        }
-
-    // };
-
 
 
     const [share, setShare] = useState(false);
@@ -101,11 +63,7 @@ function Playlist() {
                                     </div>
                                     <div className="flex flex-row justify-between max-w-sm mr-4">
                                         <div className="mr-2">
-                                            {/* <button className="border-2 border-white rounded-md p-[1px]" onClick={work}>{<BsPlay size={25} name={file.url}/>}
-                                            </button> */}
-
-                                            <button className="border-2 border-white rounded-md p-[1px]" onClick={toggle}>{playing ? <BsPauseFill name={file.url} size={25} /> : <BsPlay name={file.url} size={25} />}
-                                            </button>
+                                            <AudioPlayer className=''src={file.url}/>
                                         </div>
                                         <div className="mt-[.5px] border-2 border-white rounded-md p-[3px]">
                                             <button onClick={handleClick}><FiShare size={20} />
