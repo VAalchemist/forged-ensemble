@@ -46,7 +46,7 @@
 # Deployed Page
 <a href="https://vaalchemist.github.io/JACK-ensemble/">Github pages for application</a> 
 
-<a href="">Heroku link for application</a> 
+<a href="https://forged-ensemble.herokuapp.com/">Heroku link for application</a> 
  
 # Contact
 <a href="">LinkedIn: Justyn Subrai </a><br>
