@@ -133,7 +133,9 @@ useEffect(() => {
     return () => {
       window.removeEventListener("keydown", beatPad)
     }
-  });
+});
+  
+  
 
 const q = (Q);
 const w = (W);
@@ -147,17 +149,45 @@ const z = (Z);
 const x = (X);
 const c = (C);
 const v = (V);
+  
+  const sounds = {
+    'q': q,
+    'w': w
+}
 
+  const handleRecord = () => {
+    console.log('recording...')
+  }
+
+  const handleStop = () => {
+    console.log('stop recording...')
+  }
+
+  const handleStart = () => {
+    console.log(' play recording...')
+  }
+
+const createArray = length => Array.from(
+  { length },
+  // Mapper function: i is the current index in the length being iterated over:
+  (_, i) => i + 1
+) 
 
   const storeBeat = () => {
   //store the beat in an array
     
     //DOM manipulation
+
   }
   
   const spawnSongArr =() => {
 
   }
+
+  const handlePad = (event) => {
+    console.log(event.target.getAttribute('data-note'));
+    Beats(sounds[event.target.getAttribute('data-note')]);
+}
 
 const Beats = (src) => {
   const sound = new Howl({
@@ -194,9 +224,9 @@ hover:animate-spin hover:ml-32 hover:duration-1000 p-8 md:p-12 '>
           
           <SoundBoardBtns>
 
-            <Controls><MdFiberManualRecord size={30} /></Controls>
-            <Controls><MdStop size={30} /></Controls>
-            <Controls><MdPlayArrow size={30} /></Controls>
+            <Controls><MdFiberManualRecord size={30} onClick={handleRecord} /></Controls>
+            <Controls><MdStop size={30} onClick={handleStop} /></Controls>
+            <Controls><MdPlayArrow size={30} onClick={handleStart} /></Controls>
             <a href ='./upload'>
             <Controls><MdOutlineSave size={30}/></Controls>
             </a>
@@ -206,18 +236,18 @@ hover:animate-spin hover:ml-32 hover:duration-1000 p-8 md:p-12 '>
         </div>
 
         <SoundBoard>
-          <BlueBeatPad id='0' onClick={() => Beats(q)} data-note='Q'></BlueBeatPad>
-          <OrangeBeatPad id='1' onClick={() => Beats(w)} data-note='W'></OrangeBeatPad>
-          <PinkBeatPad id='2' onClick={() => Beats(e)} data-note='E'></PinkBeatPad>
-          <GreenBeatPad id='3' onClick={() => Beats(r)} data-note='R'></GreenBeatPad>
-          <BlueBeatPad id='4' onClick={() => Beats(a)} data-note='A'></BlueBeatPad>
-          <OrangeBeatPad id='5' onClick={() => Beats(s)} data-note='S'></OrangeBeatPad>
-          <PinkBeatPad id='6' onClick={() => Beats(d)} data-note='D'></PinkBeatPad>
-          <GreenBeatPad id='7' onClick={() => Beats(f)} data-note='F'></GreenBeatPad>
-          <BlueBeatPad id='8' onClick={() => Beats(z)} data-note='Z'></BlueBeatPad>
-          <OrangeBeatPad id='9' onClick={() => Beats(x)} data-note='X'></OrangeBeatPad>
-          <PinkBeatPad id='10' onClick={() => Beats(c)} data-note='C'></PinkBeatPad>
-          <GreenBeatPad id='11' onClick={() => Beats(v)} data-note='V'></GreenBeatPad>
+          <BlueBeatPad id='0' onClick={handlePad} data-note='q'></BlueBeatPad>
+          <OrangeBeatPad id='1' onClick={handlePad} data-note='w'></OrangeBeatPad>
+          <PinkBeatPad id='2' onClick={handlePad} data-note='e'></PinkBeatPad>
+          <GreenBeatPad id='3' onClick={handlePad} data-note='r'></GreenBeatPad>
+          <BlueBeatPad id='4' onClick={handlePad} data-note='a'></BlueBeatPad>
+          <OrangeBeatPad id='5' onClick={handlePad} data-note='s'></OrangeBeatPad>
+          <PinkBeatPad id='6' onClick={handlePad} data-note='d'></PinkBeatPad>
+          <GreenBeatPad id='7' onClick={handlePad} data-note='f'></GreenBeatPad>
+          <BlueBeatPad id='8' onClick={handlePad} data-note='z'></BlueBeatPad>
+          <OrangeBeatPad id='9' onClick={handlePad} data-note='x'></OrangeBeatPad>
+          <PinkBeatPad id='10' onClick={handlePad} data-note='c'></PinkBeatPad>
+          <GreenBeatPad id='11' onClick={handlePad} data-note='v'></GreenBeatPad>
         </SoundBoard>
 
 
