@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a74d4936.css",
+    "main.js": "/static/js/main.d46192a9.js",
+    "static/media/login.mp4": "/static/media/login.a5f7f015e3e67413b4e5.mp4",
+    "static/media/home.mp4": "/static/media/home.06e78dfa3039d1025591.mp4",
+    "static/media/song1.mp3": "/static/media/song1.646210d3830b8caf03e8.mp3",
+    "static/media/MainBG.png": "/static/media/MainBG.9e2a5b0252c8f6edb163.png",
+    "static/media/loginImg.png": "/static/media/loginImg.08a970ce62fe2d34d948.png",
+    "static/media/Justyn.png": "/static/media/Justyn.a407ca278340ab034ea1.png",
+    "static/media/Kevin.png": "/static/media/Kevin.d5afc376d3fe977f36a4.png",
+    "static/media/Charlene.png": "/static/media/Charlene.60522c0d21a3585d35e2.png",
+    "static/media/dewb.wav": "/static/media/dewb.62363ab87f3863d6f213.wav",
+    "static/media/bewp.wav": "/static/media/bewp.0ee95f4a6a14bf22367e.wav",
+    "static/media/boom.wav": "/static/media/boom.d89f41a5296c9cc8d21e.wav",
+    "static/media/Arlo.png": "/static/media/Arlo.9c024823b962a23a1df8.png",
+    "static/media/tom-2.wav": "/static/media/tom-2.37d64d274f9fa25585ae.wav",
+    "static/media/Mando.png": "/static/media/Mando.19712306ad549011b814.png",
+    "static/media/hihat.wav": "/static/media/hihat.0273528cafd1985aa0e4.wav",
+    "static/media/tom-1.wav": "/static/media/tom-1.4a4e95464194a8efbe0a.wav",
+    "static/media/deepkick.wav": "/static/media/deepkick.3da4f701b20ddce89909.wav",
+    "static/media/clap.wav": "/static/media/clap.8b67c6856ba64cd7653d.wav",
+    "static/media/board.png": "/static/media/board.7ab3f158d1a15c1c7791.png",
+    "static/media/shake.wav": "/static/media/shake.4f76ec8c6abd315d5990.wav",
+    "static/media/shortHH.wav": "/static/media/shortHH.ba60befd234aedb393d5.wav",
+    "static/media/shortclap.wav": "/static/media/shortclap.daa8a0b29077fa9be88f.wav",
+    "static/media/shortshake.wav": "/static/media/shortshake.13b47ccbc9d6f1275af5.wav",
+    "static/media/shortkick.wav": "/static/media/shortkick.a3f7f0923226658aa48c.wav",
+    "static/media/kick.wav": "/static/media/kick.1d842c5565abcec54198.wav",
+    "index.html": "/index.html",
+    "main.a74d4936.css.map": "/static/css/main.a74d4936.css.map",
+    "main.d46192a9.js.map": "/static/js/main.d46192a9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a74d4936.css",
+    "static/js/main.d46192a9.js"
+  ]
+}
