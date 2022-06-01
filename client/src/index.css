@@ -51,3 +51,9 @@ i svg  {
 svg g {
     fill : white;
 }
+
+@media (max-height: 1035px) {
+    .contact-card {
+        padding-top: 1.5rem;
+    }
+}
