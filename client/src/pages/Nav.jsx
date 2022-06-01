@@ -31,8 +31,9 @@ function Nav() {
   const [addPic, { error }] = useMutation(ADDPIC)
   const id = Auth.getProfile().data._id;
   const { loading, data } = useQuery(QUERY_USER, { variables: { _id: id } });
-  const [picState, setPicState] = useState("");
-  // let profilePic = '';
+  const [picState, setPicState] = useState('');
+  console.log(picState)
+  
   const inputFile = useRef(null) 
   const [updateImage, setNewImage] = useState(false);
   const handleNew = () => setNewImage(!updateImage);
@@ -42,7 +43,7 @@ function Nav() {
   useEffect(() => {
     if (data) {
       setPicState(data.singleUser.profile_pic);
-      // profilePic = data.singleUser.profile_pic;
+      
     }
   });
 
@@ -111,18 +112,13 @@ function Nav() {
           </div>
           <div className="flex items-center">
             <button onClick={handleImage}>
-            {/* {profilePic === '' ? (<img src={Mando} className="w-[65px] rounded-full border-2 border-pink-300"/>) : (<img src={picState} className="w-[65px] rounded-full border-2 border-pink-300"/>) } */}
-          <img src={picState} alt="" className="w-[65px] rounded-full border-2 border-pink-300"/>
+            { picState == null ? (<img src={Mando} className="w-[65px] rounded-full border-2 border-pink-300"/>) : (<img src={picState} className="w-[65px] rounded-full border-2 border-pink-300"/>) }
+          
               
-                {/* // {error ? ( */}
-                {/* //     <div>
-                //       <p className="error-text">Please enter valid data</p>
-                //     </div>
-                //   ) : null} */}
+            
 
   
             </button>
-            {/* <div className="ml-2 py-2 w-20 bg-white rounded-lg "> */}
             <div className={
               image
               ? "ml-2 py-2 w-20 left-[100%] bg-white rounded-lg ease-in-out duration-1000 opacity-[72%]"
