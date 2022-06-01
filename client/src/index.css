@@ -51,3 +51,27 @@ i svg  {
 svg g {
     fill : white;
 }
+
+input {
+    color: black;
+}
+
+.profileCon::-webkit-scrollbar {
+    display: none;
+  }
+
+
+@media (max-width: 600px) {
+    .playlistCon {
+        flex-direction: column;
+    }
+    .shareCon {
+        padding: 7px;
+    }
+}
+
+@media (max-height: 784px) {
+    .profileCon {
+        max-height: 450px;
+    }
+}
