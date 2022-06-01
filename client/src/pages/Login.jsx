@@ -8,6 +8,7 @@ import { Background, BgImg, Zoom } from '../components/login.styles'
 import loginimg from '../images/loginImg.png'
 import { FaFacebookF, FaGoogle, FaTwitter, FaRegEnvelope } from 'react-icons/fa'
 import { MdLockOutline } from 'react-icons/md'
+import '../index.css';
 
 
 function Login(props) {
@@ -102,7 +103,7 @@ function Login(props) {
         </div>
       </main>
       {/* mobile view */}
-      <main className='flex flex-col items-center justify-center min-h-screen py-2'>
+      <main className='flex md:hidden flex-col items-center justify-center min-h-screen py-2'>
         <Zoom className='border-2 border-[#ff006e] rounded-xl flex flex-col items-center w-full px-24 m-5 text-center'>
           {/* login */}
           <div className="w-5/5 p-5 text-white rounded-tl-2xl rounded-bl-2xl">

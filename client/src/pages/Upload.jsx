@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import Nav from '../pages/Nav';
+import Nav from './Nav';
 import Auth from '../utils/auth';
 import { useMutation} from '@apollo/client';
 import { ADDFILE } from '../utils/mutations';
 import { useNavigate } from "react-router-dom";
 import { LogOut } from "../components/nav.styles";
-import { Input } from "../components/contact.styles";
 
 
 
-function Temp() {
+
+function Upload() {
     // Auth.loggedIn()
 
 
@@ -87,4 +87,4 @@ function Temp() {
     }
 
 
-export default Temp
+export default Upload
