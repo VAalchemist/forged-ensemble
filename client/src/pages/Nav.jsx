@@ -106,14 +106,14 @@ function Nav() {
         <div className="flex flex-row mt-4">
           <div>
             <a href="/">
-              <img src={Logo} alt="Logo Image" style={{ width: "170px" }} />
+              <img src={Logo} alt="mini soundboard" style={{ width: "170px" }} />
             </a>
           </div>
           <div className="flex items-center">
             <button onClick={handleImage}>
             {/* {profilePic === '' ? (<img src={Mando} className="w-[65px] rounded-full border-2 border-pink-300"/>) : (<img src={picState} className="w-[65px] rounded-full border-2 border-pink-300"/>) } */}
-           <img src={picState} className="w-[65px] rounded-full border-2 border-pink-300"/>
-               
+          <img src={picState} alt="" className="w-[65px] rounded-full border-2 border-pink-300"/>
+              
                 {/* // {error ? ( */}
                 {/* //     <div>
                 //       <p className="error-text">Please enter valid data</p>

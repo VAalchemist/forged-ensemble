@@ -52,8 +52,38 @@ svg g {
     fill : white;
 }
 
-@media (max-height: 1035px) {
+
+@media (max-height: 1161px) {
     .contact-card {
         padding-top: 1.5rem;
+    }
+}
+@media (max-height: 1046px) {
+    .contact-card {
+        visibility: hidden;
+    }
+}
+
+input {
+    color: black;
+}
+
+.profileCon::-webkit-scrollbar {
+    display: none;
+  }
+
+
+@media (max-width: 600px) {
+    .playlistCon {
+        flex-direction: column;
+    }
+    .shareCon {
+        padding: 7px;
+    }
+}
+
+@media (max-height: 784px) {
+    .profileCon {
+        max-height: 450px;
     }
 }

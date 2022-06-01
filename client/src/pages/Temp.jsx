@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Nav from '../pages/Nav';
 import Auth from '../utils/auth';
 import { useMutation} from '@apollo/client';
 import { ADDFILE } from '../utils/mutations';
 import { useNavigate } from "react-router-dom";
 import { LogOut } from "../components/nav.styles";
-import { Input } from "../components/contact.styles";
+
 
 
 
@@ -50,16 +50,16 @@ function Temp() {
             .then(response => response.json());
     
             try {
-              const mutationResponse = await addFile({
-                  variables: { fileName: fileNameState.fileName, url: data.url, userId: id, artist: artist},
-              });
-              navigate("/");
+                const mutationResponse = await addFile({
+                    variables: { fileName: fileNameState.fileName, url: data.url, userId: id, artist: artist},
+                });
+                navigate("/");
     
-          }
-          catch (e) {
-              console.log(e);
-          };    
-          
+            }
+            catch (e) {
+                console.log(e);
+            };    
+        
 
 
 
@@ -68,7 +68,7 @@ function Temp() {
         return (
             <>
                 <Nav />
-                <div className='w-full h-screen flex justify-center items-center p-4 text-white'>
+                    <div className='w-full h-screen flex justify-center items-center p-4 text-white'>
                     <form name='img-form' encType='multipart/form-data' onSubmit={handleFormSubmit}>
 
                         <input className='flex flex-col max-w-[600px] w-full z-[1] placeholder-white p-4 rounded-[10px] bg-[#290185] text-white opacity-[85%] mb-4' type='text' name='fileName' placeholder='file name' onChange={handleNameChange}></input>
@@ -78,8 +78,8 @@ function Temp() {
 
                     </form>
                     </div>
-                    <div className='abosulte h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
-  
+                    <div className='absolute h-[25rem] text-white w-full justify-center items-center hidden md:flex'>
+
                 </div>
 
             </>
