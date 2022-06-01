@@ -152,9 +152,21 @@ const v = (V);
   
   const sounds = {
     'q': q,
-    'w': w
+    'w': w,
+    'e': e,
+    'r': r,
+    'a': a,
+    's': s,
+    'd': d,
+    'f': f,
+    'z': z,
+    'x': x,
+    'c': c,
+    'v': v
+
 }
 
+  
   const handleRecord = () => {
     console.log('recording...')
   }
@@ -167,18 +179,13 @@ const v = (V);
     console.log(' play recording...')
   }
 
-const createArray = length => Array.from(
+  const storeBeat = length => Array.from(
   { length },
   // Mapper function: i is the current index in the length being iterated over:
-  (_, i) => i + 1
-) 
+    (_, i) => i + 1
+  ); 
 
-  const storeBeat = () => {
-  //store the beat in an array
-    
-    //DOM manipulation
-
-  }
+  
   
   const spawnSongArr =() => {
 
@@ -195,7 +202,7 @@ const Beats = (src) => {
     html5: true,
   });
   sound.play();
-  storeBeat();
+  console.log(storeBeat(sounds)); 
 };
 
 Howler.volume(0.5);
