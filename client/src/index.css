@@ -58,9 +58,15 @@ svg g {
         padding-top: 1.5rem;
     }
 }
-@media (max-height: 1046px) {
+@media (max-height: 850px) {
     .contact-card {
         visibility: hidden;
+    }
+}
+
+@media (max-height: 1052px) {
+    .contact-card {
+        padding-top: 4.5rem;
     }
 }
 

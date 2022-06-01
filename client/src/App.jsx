@@ -12,7 +12,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import Studio from './pages/Studio';
-import Temp from './pages/Temp';
+import Upload from './pages/Upload';
 
 
 const httpLink = createHttpLink({
@@ -46,7 +46,7 @@ function App() {
             <Route path="/studio" element={<Studio />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/temp" element={<Temp/>} />
+            <Route path="/upload" element={<Upload/>} />
           </Routes>
         </Router>
       </ApolloProvider>

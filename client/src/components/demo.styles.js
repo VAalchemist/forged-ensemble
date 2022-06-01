@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import tw from 'tailwind-styled-components'; 
 
 
@@ -18,7 +17,6 @@ hover:ring-8
 hover:duration-500
 active:duration-500
 `;
-
 
 export const BlueBeatPad = tw(BeatPad)`
 bg-[#00dfff]
