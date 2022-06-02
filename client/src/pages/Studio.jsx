@@ -74,6 +74,8 @@ function Studio() {
     };
   }
 
+  
+const isRecording =   
 
 useEffect(() => {
 
@@ -135,7 +137,6 @@ useEffect(() => {
     }
 });
   
-  
 
 const q = (Q);
 const w = (W);
@@ -169,6 +170,9 @@ const v = (V);
   
   const handleRecord = () => {
     console.log('recording...')
+
+
+    
   }
 
   const handleStop = () => {
@@ -181,7 +185,7 @@ const v = (V);
 
   
 
-  function storeBeat() {
+  function storeBeat() {  
     var results = [];
     for (var i = 0; i < arguments.length; i++) {
         results.push(arguments[i]);
