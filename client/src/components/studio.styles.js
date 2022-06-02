@@ -19,14 +19,14 @@ md:mt-20
 `;
 
 export const Controls = tw.button`
-hover:border-b
 hover:border-teal-200
-hover:text-teal-300
+hover:text-[#fcacf2]
 rounded-full
 hover:shadow-2xl
-hover:shadow-indigo-600
-active:text-lime-500
-p-1
+hover:shadow-[#ff006e]
+active:text-teal-300
+pl-4
+py-1
 md:p-4  
 `;
 
@@ -44,17 +44,13 @@ rounded-xl
 `;
 
 export const SoundBoardBtns = tw.div`
-flex
-flex-col
-sm:flex-row
-sm:justify-center
+md:flex
 border-4
-border-gray-800
-bg-gray-600
+border-[#00bdff]
 bg-opacity-40
 rounded-xl
 m-2
-sm:w-2/4
+px-2
 text-purple-900
 `;
 
