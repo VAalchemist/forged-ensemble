@@ -237,11 +237,11 @@ hover:animate-spin hover:ml-32 hover:duration-1000 p-8 md:p-12 '>
           
           <SoundBoardBtns>
 
-            <Controls><MdFiberManualRecord size={30} onClick={handleRecord} /></Controls>
-            <Controls><MdStop size={30} onClick={handleStop} /></Controls>
-            <Controls><MdPlayArrow size={30} onClick={handleStart} /></Controls>
+            <Controls><MdFiberManualRecord size={25} onClick={handleRecord} /></Controls>
+            <Controls><MdStop size={25} onClick={handleStop} /></Controls>
+            <Controls><MdPlayArrow size={25} onClick={handleStart} /></Controls>
             <a href ='./upload'>
-            <Controls><MdOutlineSave size={30}/></Controls>
+            <Controls><MdOutlineSave size={25}/></Controls>
             </a>
             {/* <Controls><MdOutlineSave size={30} onClick={handleClickUpload}/><input type='file' ref={inputFile} style={{display:'none'}} id='upload' onChange={handleUpload} accept='.mp3'></input></Controls> */}
 
