@@ -53,7 +53,7 @@ function Upload() {
                 const mutationResponse = await addFile({
                     variables: { fileName: fileNameState.fileName, url: data.url, userId: id, artist: artist},
                 });
-                navigate("/");
+                navigate("/profile");
     
             }
             catch (e) {
