@@ -45,7 +45,7 @@ function Cards() {
           
           
         </div>
-        <div className="w-48 h-[315px] flex justify-between items-center mt-[120px] hover:mt-[-220px] duration-500 bg-[#FC77EB] px-1 rounded-t-[50px] items center m">
+        <div className="w-48 h-[315px] flex justify-between items-center mt-[120px] hover:mt-[-220px] duration-500 bg-[#fee685] px-1 rounded-t-[50px] items center m">
         
         <div className="text-center justify-between w-full mb-14">
         <p className='mb-5 font-bold'>Charlene Kim</p>
