@@ -41,7 +41,6 @@ function Playlist() {
 
     }
     
-    const shareUrl = 'https://www.facebook.com/';
 
     const id = Auth.getProfile().data._id;
     const { data } = useQuery(QUERY_USER_Files, { variables: { userId: id } });
@@ -78,22 +77,22 @@ function Playlist() {
                                             <button  onClick={handleClick}><FiShare id={file._id} size={20} />
                                             </button>
                                             <div className={
-                                                share && playlist === file._id ? 'max-w-screen border-2 rounded-xl fixed w-[5%] h-[5%] bg-black flex flex-col justify-center items-center  ease-in-out duration-1000 opacity-[90%]' : 'ease-in-out duration-1000 fixed left-[-57%] top-0 w-[100%] h-screen bg-black flex flex-col justify-center items-center opacity-[0]'
+                                                share && playlist === file._id ? 'ml-[60px] px-2 -mt-[112px] max-w-screen border-2 rounded-xl fixed w-[40px] h-[175px] bg-black flex flex-col justify-center items-center  ease-in-out duration-1000 opacity-[90%]' : 'hidden'
                                             }>
-                                                <div className=" flex flex-col justify-between w-[75%]">
-                                                    <FacebookShareButton url={shareUrl}>
+                                                <div className=" flex flex-col items-center w-[75%]">
+                                                    <FacebookShareButton className="my-1" url={file.url}>
                                                         <FacebookIcon size={25} />
                                                     </FacebookShareButton>
-                                                    <TwitterShareButton url={shareUrl}>
+                                                    <TwitterShareButton className="my-1" url={file.url}>
                                                         <TwitterIcon size={25} />
                                                     </TwitterShareButton>
-                                                    <TumblrShareButton url={shareUrl}>
+                                                    <TumblrShareButton className="my-1" url={file.url}>
                                                         <TumblrIcon size={25} />
                                                     </TumblrShareButton>
-                                                    <PinterestShareButton url={shareUrl}>
+                                                    <PinterestShareButton className="my-1" url={file.url}>
                                                         <PinterestIcon size={25} />
                                                     </PinterestShareButton>
-                                                    <EmailShareButton url={shareUrl}>
+                                                    <EmailShareButton className="my-1" url={file.url}>
                                                         <EmailIcon size={25} />
                                                     </EmailShareButton>
                                                 </div>
