@@ -86,7 +86,7 @@ function Login(props) {
                       <p className="error-text">The provided credentials are incorrect</p>
                     </div>
                   ) : null}
-                  <button type='submit' className='border-2 border-[#ff006e] text-[#ff006e] rounded-full px-12 py-2 inline-block font-semibold hover:bg-[#ff006e] hover:text-white'>Sign In</button>
+                  <button type='submit' className=' border-2 border-[#ff006e] text-[#ff006e] rounded-full px-12 py-2 inline-block font-semibold hover:bg-[#ff006e] hover:text-white'>Sign In</button>
                 </form>
               </div>
 
@@ -103,10 +103,10 @@ function Login(props) {
         </div>
       </main>
       {/* mobile view */}
-      <main className='flex md:hidden flex-col items-center justify-center min-h-screen py-2'>
-        <Zoom className='border-2 border-[#ff006e] rounded-xl flex flex-col items-center w-full px-24 m-5 text-center'>
+      <main className=' flex md:hidden flex-col items-center justify-center min-h-screen py-2'>
+        <Zoom className=' border-2 border-[#ff006e] rounded-xl flex flex-col items-center w-full px-24 m-5 text-center'>
           {/* login */}
-          <div className="w-5/5 p-5 text-white rounded-tl-2xl rounded-bl-2xl">
+          <div className="bg-black bg-opacity-[87%] w-5/5 p-5 text-white rounded-tl-2xl rounded-bl-2xl">
             <div className='font-bold'><span className='text-[#ff006e]'>Forged</span> Ensemble</div>
             <div className='py-10'>
               <h2 className='text-3xl font-bold mb-2'>Sign into your Account</h2>

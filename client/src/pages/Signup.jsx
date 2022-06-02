@@ -123,7 +123,7 @@ function Signup() {
 
        {/* mobile view */}
       <main className='flex  md:hidden flex-col items-center justify-center min-h-screen py-2'>
-        <Zoom className='border-2 border-[#00b8ff] rounded-xl flex flex-col items-center w-full px-24 m-5 text-center'>
+        <Zoom className='bg-black bg-opacity-[87%] border-2 border-[#00b8ff] rounded-xl flex flex-col items-center w-full px-24 m-5 text-center'>
             {/* login */}
             <div className="w-5/5 p-5 text-white rounded-tl-2xl rounded-bl-2xl">
               <div className='font-bold'><span className='text-[#00b8ff]'>Forged</span> Ensemble</div>
