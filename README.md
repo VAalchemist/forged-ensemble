@@ -38,15 +38,18 @@
 
 
 # Photos
-![]()
+<img width="1310" alt="Screen Shot 2022-06-05 at 5 35 14 PM" src="https://user-images.githubusercontent.com/94813193/172077221-e81abf92-42d7-404e-9878-e5509829ef97.png">
 
-![]()
+![SoundBoard](https://user-images.githubusercontent.com/94813193/172077098-21963e64-d4f6-4373-bbd8-e27fdf665b91.png)
+
+
+
 
 
 # Deployed Page
 <a href="https://vaalchemist.github.io/JACK-ensemble/">Github pages for application</a> 
 
-<a href="">Heroku link for application</a> 
+<a href="https://forged-ensemble.herokuapp.com/login">Heroku link for application</a> 
  
 # Contact
 <a href="">LinkedIn: Justyn Subrai </a><br>
